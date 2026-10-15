@@ -13,7 +13,7 @@ the membership form, automated welcome emails, and the admin dashboard.
 | `rules.html` / `history.html` / `benefits.html` | About Us pages (shared `css/page.css`) |
 | `server.js` | Zero-dependency Node server — serves the site, the API, and sends welcome emails |
 | `admin.html`, `admin.css`, `admin.js` | The club dashboard: members, payments, prospects and messages |
-| `docs/member-onboarding.html` | Print-ready New Wrestler Onboarding Pack (open in a browser → Print → Save as PDF) |
+| `docs/member-onboarding.html` | Print-ready New Wrestler Onboarding Pack — with a "Download PDF" button serving `docs/member-onboarding.pdf` |
 | `docs/club-information.html` | Print-ready Club Information Pack |
 | `data/club.db` | SQLite database (created automatically on first run) |
 | `config.json` | Admin password hash + optional email key (created automatically; keep private) |
@@ -113,6 +113,8 @@ holds the admin password hash and email key — back it up too, and never share 
 ## Notes
 
 - Sessions log out when the server restarts (tokens are kept in memory).
+- Regenerate the onboarding PDF after editing `docs/member-onboarding.html`:
+  `"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless=new --disable-gpu --no-pdf-header-footer --virtual-time-budget=10000 --print-to-pdf="C:\Users\User\Desktop\Khalsa Akhara Coventry\docs\member-onboarding.pdf" "file:///C:/Users/User/Desktop/Khalsa%20Akhara%20Coventry/docs/member-onboarding.html"`
 - Public forms are rate-limited per IP and use a honeypot field against bots.
 - The site needs the server running for forms, the dashboard and the media
   player to work; browsing the pages themselves also works by double-clicking
