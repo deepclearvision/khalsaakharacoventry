@@ -365,11 +365,13 @@ function serveStatic(res, urlPath) {
 
 function sendFile(res, file, stat, mime) {
   const isHtml = mime.startsWith('text/html');
-  const isMedia = mime.startsWith('audio/') || mime.startsWith('video/');
+  const isMedia = mime.startsWith('audio/') || mime.startsWith('video/') || mime.startsWith('image/');
   res.writeHead(200, {
     'Content-Type': mime,
     'Content-Length': stat.size,
-    'Cache-Control': isHtml ? 'no-store' : ('public, max-age=' + (isMedia ? 86400 : 3600)),
+    // HTML never cached; media cached a day; css/js always revalidated so
+    // site updates show up immediately on every device
+    'Cache-Control': isHtml ? 'no-store' : (isMedia ? 'public, max-age=86400' : 'no-cache'),
   });
   fs.createReadStream(file).pipe(res);
 }
