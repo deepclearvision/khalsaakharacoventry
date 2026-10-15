@@ -585,7 +585,7 @@ svg { display: block; }
   clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
 }
 .step strong { display: block; font-family: var(--font-display); font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase; font-size: 1.05rem; margin-bottom: 4px; }
-.step p, .step span { color: var(--muted); font-size: 0.92rem; }
+.step p { color: var(--muted); font-size: 0.92rem; }
 
 /* Pull-quote */
 .quote {
