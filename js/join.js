@@ -49,7 +49,11 @@
     mark1.classList.toggle('is-active', !onTwo);
     mark2.classList.toggle('is-active', onTwo);
     if (bar) bar.classList.toggle('is-done', onTwo);
-    window.scrollTo({ top: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
+    /* bring the wizard to the top, just below the sticky header — not the page top */
+    var anchor = document.getElementById('joinSteps') || step1;
+    var head = document.getElementById('siteHead');
+    var top = anchor.getBoundingClientRect().top + window.pageYOffset - (head ? head.offsetHeight + 14 : 14);
+    window.scrollTo({ top: Math.max(top, 0), behavior: prefersReduced ? 'auto' : 'smooth' });
   }
 
   toStep2Btn.addEventListener('click', function () {

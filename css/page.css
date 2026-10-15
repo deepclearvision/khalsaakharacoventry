@@ -451,6 +451,10 @@ svg { display: block; }
   background-position: center 30%;
   overflow: hidden;
 }
+.page-hero.page-hero--short {
+  min-height: 30vh;
+  padding: 150px 0 clamp(28px, 4vw, 44px);
+}
 .page-hero::before {
   content: "";
   position: absolute; inset: 0;
