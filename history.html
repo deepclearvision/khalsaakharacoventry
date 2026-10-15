@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wrestling History in Sikhism — Khalsa Akhara Wrestling Coventry</title>
+  <meta name="description" content="Wrestling history in Sikhism — from malla-yuddha and the traditional akhara to the Sikh Gurus, the great pehlwans of Punjab and the living akhara revival in the UK.">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Mukta+Mahee:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/page.css">
+</head>
+<body>
+
+  <!-- ══════════ GLOBAL TEXTURE & AMBIENT LAYERS ══════════ -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="ambient" aria-hidden="true">
+    <span class="ambient__orb ambient__orb--1"></span>
+    <span class="ambient__orb ambient__orb--2"></span>
+  </div>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <header class="site-head" id="siteHead">
+    <a class="brand" href="index.html" aria-label="Khalsa Akhara Wrestling Coventry — home">
+      <span class="brand__logo"><img src="assets/img/logo.jpg" alt="Khalsa Akhara Wrestling Coventry club logo"></span>
+      <span class="brand__text">
+        <strong>Khalsa Akhara</strong>
+        <em>Wrestling Coventry</em>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <a href="index.html" class="main-nav__link">Home</a>
+      <div class="main-nav__drop">
+        <button type="button" class="main-nav__link main-nav__dropbtn is-active" id="aboutDropBtn" aria-haspopup="true" aria-expanded="false">About Us <span class="main-nav__caret" aria-hidden="true">▾</span></button>
+        <div class="main-nav__menu" id="aboutDropMenu">
+          <a href="index.html#about">About Us</a>
+          <a href="rules.html">Rules of the Akhara</a>
+          <a href="history.html">Wrestling History</a>
+          <a href="benefits.html">Benefits of Wrestling</a>
+        </div>
+      </div>
+      <a href="shop.html" class="main-nav__link">Shop</a>
+      <a href="index.html#media" class="main-nav__link">Media</a>
+      <a href="index.html#contact" class="main-nav__link">Contact</a>
+    </nav>
+
+    <div class="head-actions">
+      <div class="head-socials" aria-label="Social media">
+        <a class="social" href="https://www.facebook.com/khalsaakharagym" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5Z"/></svg></a>
+        <a class="social" href="https://www.instagram.com/khalsaakharawrestling/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a class="social" href="https://www.youtube.com/@CoventryWrestling" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.9C18.2 5 12 5 12 5s-6.2 0-7.8.3A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.9c1.6.3 7.8.3 7.8.3s6.2 0 7.8-.3a2.6 2.6 0 0 0 1.8-1.9A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8ZM10 15.2V8.8L15.5 12 10 15.2Z"/></svg></a>
+      </div>
+      <a href="join.html" class="btn btn--solid btn--sm head-cta">Become a Member</a>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MOBILE MENU ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__nav" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About Us</a>
+      <a href="rules.html">Rules of the Akhara</a>
+      <a href="history.html">Wrestling History</a>
+      <a href="benefits.html">Benefits of Wrestling</a>
+      <a href="shop.html">Shop</a>
+      <a href="index.html#media">Media</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="join.html" class="mobile-menu__cta">Become a Member</a>
+    </nav>
+    <div class="mobile-menu__socials" aria-label="Social media">
+      <a class="social" href="https://www.facebook.com/khalsaakharagym" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5Z"/></svg></a>
+      <a class="social" href="https://www.instagram.com/khalsaakharawrestling/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a class="social" href="https://www.youtube.com/@CoventryWrestling" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.9C18.2 5 12 5 12 5s-6.2 0-7.8.3A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.9c1.6.3 7.8.3 7.8.3s6.2 0 7.8-.3a2.6 2.6 0 0 0 1.8-1.9A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8ZM10 15.2V8.8L15.5 12 10 15.2Z"/></svg></a>
+    </div>
+    <div class="mobile-menu__foot">
+      <span class="punjabi">ਖਾਲਸਾ ਅਖਾੜਾ</span>
+      <span>Honesty • Integrity • Respect</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ══════════ PAGE HERO ══════════ -->
+    <section class="page-hero" style="background-image:url('assets/img/hero-2.jpg')">
+      <div class="container page-hero__inner">
+        <p class="kicker">About Us • Heritage &amp; Tradition</p>
+        <h1 class="page-hero__title">Wrestling History in <span class="accent">Sikhism</span></h1>
+        <p class="page-hero__sub">From the earthen pits of ancient India to the Gurus&rsquo; arenas and the great pehlwans of Punjab — the story of kushti, and why the akhara still stands at the heart of Sikh life.</p>
+        <nav class="page-hero__crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">/</span>
+          <a href="index.html#about">About Us</a>
+          <span class="sep">/</span>
+          <span>Wrestling History</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ══════════ AN ANCIENT SPORT ══════════ -->
+    <section class="page-section" id="origins">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">The Roots</p>
+          <h2 class="section-title">An Ancient <span class="accent">Sport</span></h2>
+          <p class="section-intro">Wrestling is one of the oldest sports in India. Its traditional form, malla-yuddha, appears in some of the earliest stories ever told.</p>
+        </div>
+
+        <div class="facts reveal">
+          <div class="fact"><strong>The epics</strong><p>Wrestling appears in the Ramayana and the Mahabharata — Bhima and Hanuman are described as the great wrestlers of the age, and Hanuman is still honoured as the patron deity of wrestlers.</p></div>
+          <div class="fact"><strong>The first manuals</strong><p>The earliest surviving training manuals date from the 12th and 13th centuries — the Manasollasa and the Malla Purana — covering wrestler types, exercises, diet and the preparation of the wrestling pit.</p></div>
+          <div class="fact"><strong>Kushti is born</strong><p>From the 16th century, Persian and Central Asian wrestling merged with malla-yuddha under the Mughals — creating pehlwani, the kushti we know today.</p></div>
+        </div>
+
+        <div class="content-grid" style="margin-top:26px;">
+          <div class="panel reveal">
+            <h3>Four styles, named after <span class="accent">legends</span></h3>
+            <p>Traditional malla-yuddha recognised four styles, each named after a legendary figure: <strong>Hanumanti</strong> — winning by technical superiority; <strong>Jambuvanti</strong> — locks and holds; <strong>Jarasandhi</strong> — breaking the opponent&rsquo;s limbs; and <strong>Bhimaseni</strong> — victory through sheer strength.</p>
+          </div>
+          <div class="panel reveal" style="--d:.08s;">
+            <h3>Older than <span class="accent">records</span></h3>
+            <p>Indian tradition holds that wrestling has been practised in the region for thousands of years, but written records reach back to the great epics and the medieval manuals. What is certain: the sport has shaped life here — court, village and temple — for at least a thousand years.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ THE AKHARA ══════════ -->
+    <section class="page-section page-section--tight" id="akhara" style="background:linear-gradient(180deg, rgba(240,144,0,0.04), transparent);">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">The Heart of the Sport</p>
+          <h2 class="section-title">Inside the Traditional <span class="accent">Akhara</span></h2>
+          <p class="section-intro">An akhara is a traditional training ground built around an earthen wrestling pit — and much more besides. Our club carries the name because we carry the same spirit.</p>
+        </div>
+
+        <div class="content-grid">
+          <div class="steps reveal">
+            <div class="step"><span class="step__num">◆</span><div><strong>The pit</strong><p>A raised square of soft earth — traditionally about 7 metres across — shaded by a canopy, with a well, bathing troughs and a shrine to Hanuman beside it. The earth itself is cared for like living soil: brought from the fields and enriched with buttermilk, oil, red ochre, turmeric and rose petals. The 13th-century Malla Purana says pit earth should be as soft as that required for seed laying.</p></div></div>
+            <div class="step"><span class="step__num">◆</span><div><strong>Dawn training</strong><p>Wrestlers rise before sunrise — traditionally around 5:00 AM — and train until mid-morning before the day&rsquo;s work begins. The pehlwani tradition describes an even earlier start, with hundreds of dands (push-ups) and baithaks (squats), running, and hours of bouts morning and evening.</p></div></div>
+            <div class="step"><span class="step__num">◆</span><div><strong>The guru–shishya bond</strong><p>Every wrestler trains under a guru, who prescribes their individual exercises, technique, diet and rest. The guru is treated as a source of strength and wisdom — the relationship is the spine of the akhara.</p></div></div>
+            <div class="step"><span class="step__num">◆</span><div><strong>Body and diet</strong><p>Milk, ghee and almonds are the holy trinity of the pehlwani diet; simple, pure (sattvic) food is favoured, and alcohol, tobacco and heavy spices are discouraged. Training tools include the gada (mace), linked with Hanuman, and the mugdar (Indian clubs).</p></div></div>
+          </div>
+
+          <div class="reveal" style="--d:.1s; display:flex; flex-direction:column; gap:24px;">
+            <div class="quote">
+              <p>In the akhara, exercise is parallel to prayer.</p>
+              <cite>— Joseph Alter, <em>The Wrestler&rsquo;s Body</em></cite>
+            </div>
+            <div class="panel panel--orange">
+              <h3>Gymnasium, temple <span class="accent">and retreat</span></h3>
+              <p>The scholar Joseph Alter describes the akhara as &ldquo;a shrine of strength where earth is turned into gold&rdquo; — a place that trained the body, steadied the mind and held a community together. That is the inheritance every modern akhara, including ours, carries forward.</p>
+            </div>
+            <div class="chips">
+              <span class="chip">Earthen pit</span>
+              <span class="chip">Gada &amp; mugdar</span>
+              <span class="chip">Hanuman</span>
+              <span class="chip">Guru–shishya</span>
+              <span class="chip">Discipline</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ THE SIKH TRADITION ══════════ -->
+    <section class="page-section" id="sikh-tradition">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">The Sikh Way</p>
+          <h2 class="section-title">Wrestling in the <span class="accent">Sikh Tradition</span></h2>
+          <p class="section-intro">The Gurus made the akhara a place where a strong body and a strong mind were trained side by side. Some of these stories are recorded history; others are treasured Sikh tradition, handed down through the centuries — and marked as such below.</p>
+        </div>
+
+        <div class="steps reveal">
+          <div class="step"><span class="step__num">1</span><div><span class="chips"><span class="chip">Sikh tradition</span></span><strong>Guru Angad Dev — the first mal akhara</strong><p>The second Guru (1504–1552) established a mal akhara at Khadur Sahib, where wrestling and sport went hand in hand with teaching children the Gurmukhi script. The site is honoured today as Gurdwara Mal Akhara Sahib — and Sikh tradition credits Guru Angad Dev with popularising physical training across the region.</p></div></div>
+          <div class="step"><span class="step__num">2</span><div><span class="chips"><span class="chip">Sikh tradition</span></span><strong>The Mal Akhara of Amritsar</strong><p>Tradition holds that Guru Ram Das (1534–1581) founded the Mal Akhara in Amritsar, and that Guru Arjan (1563–1606) once defeated a wrestler named Maskeen there and was awarded a turban of victory — an account preserved in the oral history of the Akali Nihang order.</p></div></div>
+          <div class="step"><span class="step__num">3</span><div><span class="chips"><span class="chip">Sikh tradition</span></span><strong>Guru Hargobind and the Akal Takht</strong><p>The Encyclopedia of Sikhism records that the sixth Guru (1595–1644) arranged wrestling contests at the Akal Takht in Amritsar, and the Chhauni akhara near the city commemorates where his Sikhs trained in physical feats.</p></div></div>
+          <div class="step"><span class="step__num">4</span><div><strong>Guru Gobind Singh — the warrior ideal</strong><p>The tenth Guru (1666–1708) began martial training at the age of six — riding, archery and weapons — and founded the Khalsa on Vaisakhi 1699, giving Sikhs the Five Ks and the name Singh. He is remembered as a warrior, poet and philosopher who fought only in defence of righteousness. <span class="chips" style="margin-top:6px;"><span class="chip">Sikh tradition</span></span> Biographies tell how, as a child in Patna, he organised wrestling bouts and mock battles among his playmates — dividing them into two armies and staging contests for the joy of sport.</p></div></div>
+          <div class="step"><span class="step__num">5</span><div><strong>Kushti in the Khalsa curriculum</strong><p>Shastar Vidya — the &ldquo;science of weapons&rdquo;, the martial art of the Akali Nihangs — counts mal yudh, wrestling, among its named branches alongside unarmed combat and weapon arts. So kushti sat within the Khalsa warrior&rsquo;s training, not beside it. After the British annexed Punjab in 1849 the art was suppressed and replaced by ceremonial gatka — but the Akali Nihang order preserved the older tradition, and its modern revival (wrestling included) began in the UK with Nidar Singh Nihang, profiled by the BBC as the last living master of the art.</p></div></div>
+          <div class="step"><span class="step__num">6</span><div><strong>Royal Patiala and holy Amritsar</strong><p>In the princely state of Patiala, kushti was central to courtly life and military preparation — Maharaja Bhupinder Singh patronised royal akharas, and wrestling at seasonal fairs tied the court to soldiers and peasants alike. Amritsar became a great kushti centre of its own: before the 1990s the city had nearly forty prominent akharas.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ LEGENDS OF THE MAT ══════════ -->
+    <section class="page-section page-section--tight" id="legends" style="background:linear-gradient(180deg, rgba(240,144,0,0.04), transparent);">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Champions</p>
+          <h2 class="section-title">Legends of the <span class="accent">Mat</span></h2>
+          <p class="section-intro">Punjab&rsquo;s wrestling greats — of every faith — belong to the shared story of the akhara. These are three of the greatest.</p>
+        </div>
+
+        <div class="content-grid content-grid--3">
+          <div class="panel reveal">
+            <h3>The Great <span class="accent">Gama</span></h3>
+            <p><strong>1878–1960</strong> — Born in the Amritsar district into a celebrated Kashmiri Muslim wrestling family, Gama is remembered as one of the greatest wrestlers who ever lived. He claimed never to have lost a bout in a career spanning more than fifty years.</p>
+            <p>In London in 1910 he beat the American champion Benjamin Roller in under two minutes and then the world champion Stanislaus Zbyszko, winning the John Bull World Championships and the title Rustam-e-Zaman. In the famous 1928 rematch — staged in Patiala — he beat Zbyszko in under a minute.</p>
+            <p>Gama&rsquo;s training methods influenced Bruce Lee, the Prince of Wales presented him a silver mace in 1922, and in 2022 Google honoured him with a Doodle. He remains Punjab&rsquo;s proudest son of the pit.</p>
+          </div>
+          <div class="panel reveal" style="--d:.08s;">
+            <h3>Dara <span class="accent">Singh</span></h3>
+            <p><strong>1928–2012</strong> — Born into a Sikh family in the Amritsar district, Dara Singh trained in pehlwani before turning professional. He won the Commonwealth Championship in 1959 and the World Championship in 1968, defeating Lou Thesz in Bombay.</p>
+            <p>He became a film star in more than a hundred Hindi and Punjabi films — and generations remember him best as Hanuman in the television series Ramayan, carrying the wrestling world&rsquo;s patron deity onto screens across India.</p>
+            <p>Awarded the Padma Shri, he is honoured in the Wrestling Observer Hall of Fame and the WWE Hall of Fame.</p>
+          </div>
+          <div class="panel reveal" style="--d:.16s;">
+            <h3>Kartar <span class="accent">Singh</span></h3>
+            <p><strong>Born 1953</strong> — A Punjabi wrestler from Tarn Taran, Kartar Singh is India&rsquo;s only men&rsquo;s wrestler with two Asian Games gold medals — 1978 in Bangkok and 1986 in Seoul, plus silver in 1982.</p>
+            <p>He competed at three Olympic Games, carrying the Indian flag at the 1988 Seoul opening ceremony, and won the national championship fourteen times.</p>
+            <p>His honours include the Arjuna Award (1982) and the Padma Shri (1987) — and his medals opened the door for India&rsquo;s modern wrestling era.</p>
+          </div>
+        </div>
+
+        <div class="panel reveal" style="margin-top:26px;">
+          <h3>From Jadhav to <span class="accent">Sehrawat</span></h3>
+          <p>Wrestling remains India&rsquo;s strongest Olympic sport: eight Olympic medals and counting, from K. D. Jadhav&rsquo;s bronze in 1952 — India&rsquo;s first individual Olympic medal — through Sushil Kumar, Sakshi Malik, Ravi Kumar Dahiya and Bajrang Punia to Aman Sehrawat&rsquo;s bronze in 2024. Every generation of Indian wrestlers, whatever their path, stands on the shoulders of the akhara.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ THE AKHARA TODAY ══════════ -->
+    <section class="page-section" id="today">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Now &amp; Here</p>
+          <h2 class="section-title">The Akhara Lives <span class="accent">On</span></h2>
+          <p class="section-intro">The traditional akharas of India have faced hard times — and a new generation is bringing the culture back, not least here in the UK.</p>
+        </div>
+
+        <div class="content-grid">
+          <div class="panel reveal">
+            <h3>Keeping the flame in <span class="accent">Punjab</span></h3>
+            <p>Amritsar&rsquo;s nearly forty akharas have shrunk to a handful that still train wrestlers — squeezed by modern gyms, air-conditioning and the shift from mud to Olympic mats. Yet the sport is far from finished: village <strong>chhinj</strong> tournaments across rural Punjab still draw huge crowds, and the best mud wrestlers earn a living worthy of champions.</p>
+          </div>
+          <div class="panel reveal" style="--d:.08s;">
+            <h3>A living tradition in the <span class="accent">UK</span></h3>
+            <p>Kushti is actively practised in Britain within Sikh wrestling clubs — akharas like ours. The Sikh Sports Association staged the Kushti Tournament 2026 in Leicester in August 2026, and the sport&rsquo;s own organisers describe Punjabi kushti as &ldquo;commonly practiced within local Sikh wrestling clubs (akharas)&rdquo; — traditional rules blended with UK regulations.</p>
+          </div>
+        </div>
+
+        <div class="content-grid content-grid--3" style="margin-top:26px;">
+          <div class="panel reveal">
+            <h3>Mandhir <span class="accent">Kooner</span></h3>
+            <p><strong>Team England</strong> — Bronze medallist in the 125kg+ freestyle at the Birmingham 2022 Commonwealth Games. Wrestling runs in his family — his father and uncles wrestled in India — and he reads the Japji Sahib daily and the Hanuman Chalisa before training, &ldquo;because Hanuman is the god of martial arts and wrestling.&rdquo; He now serves as Global Ambassador for wrestling at the Sikh Games.</p>
+          </div>
+          <div class="panel reveal" style="--d:.08s;">
+            <h3>Chinu <span class="accent">Singh</span></h3>
+            <p><strong>Team England, Glasgow 2014</strong> — Seven-time British champion and four-time English champion. He started wrestling aged four under his father Parmjit, and trained at Wolverhampton Wrestling Club — based at the Sikh gurdwara on Cannock Road.</p>
+          </div>
+          <div class="panel reveal" style="--d:.16s;">
+            <h3>The wider <span class="accent">akharas</span></h3>
+            <p>The revival stretches beyond the mat: the 12th UK Gatka Championship in July 2026 drew nine gatka akharas from across England — including Akali Phoola Singh Akhara of our own Coventry — and Sikh wrestler Jasmit Singh Phulka won Commonwealth bronze for Canada at Birmingham 2022. From Khadur Sahib to Coventry, the akhara endures.</p>
+          </div>
+        </div>
+
+        <div class="panel panel--orange reveal" style="margin-top:26px;">
+          <h3>From Guru Angad Dev&rsquo;s arena <span class="accent">to our mats</span></h3>
+          <p>Five centuries of the same idea: train the body, steady the mind, hold the community together. When you step onto the mat at Khalsa Akhara Wrestling Coventry, you are stepping into a living tradition.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ SOURCES ══════════ -->
+    <section class="page-section page-section--tight" id="sources" style="background:linear-gradient(180deg, rgba(240,144,0,0.04), transparent);">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Further Reading</p>
+          <h2 class="section-title">Sources &amp; <span class="accent">Reading</span></h2>
+          <p class="section-intro">This page is researched from published sources. The ones below are a great place to keep reading — stories marked as tradition come from Sikh written and oral heritage.</p>
+        </div>
+
+        <div class="content-grid">
+          <div class="panel reveal">
+            <h3>Books &amp; <span class="accent">heritage</span></h3>
+            <p><a href="https://publishing.cdlib.org/ucpressebooks/view?docId=ft6n39p104&doc.view=content&chunk.id=ch02" target="_blank" rel="noopener">Joseph Alter, <em>The Wrestler&rsquo;s Body</em> — the akhara chapter (free full text) ↗</a><br>
+            <a href="https://www.sahapedia.org/playing-power-sporting-culture-patiala" target="_blank" rel="noopener">Sahapedia — sporting culture in Patiala ↗</a><br>
+            <a href="https://www.sikhiwiki.org/index.php/Khadur" target="_blank" rel="noopener">SikhiWiki — Khadur Sahib &amp; the Mal Akhara ↗</a></p>
+          </div>
+          <div class="panel reveal" style="--d:.08s;">
+            <h3>Profiles &amp; <span class="accent">news</span></h3>
+            <p><a href="https://www.olympics.com/en/news/who-is-the-great-gama-pehlwan-india-wrestler" target="_blank" rel="noopener">Olympics.com — who was the Great Gama? ↗</a><br>
+            <a href="https://www.teamengland.org/news/inter-faith-week-2024-mandhir-kooner-on-sikhism-and-wrestling" target="_blank" rel="noopener">Team England — Mandhir Kooner on Sikhism &amp; wrestling ↗</a><br>
+            <a href="https://www.wolverhampton.gov.uk/news/grappler-going-gold-wolverhampton" target="_blank" rel="noopener">Wolverhampton Council — Chinu Singh ↗</a><br>
+            <a href="https://khalsavox.com/sports/amritsars-akhadas-fight-for-survival-as-urban-wrestling-culture-fades/" target="_blank" rel="noopener">Khalsa Vox — Amritsar&rsquo;s akharas fight for survival ↗</a></p>
+          </div>
+          <div class="panel reveal" style="--d:.16s;">
+            <h3>Reference</h3>
+            <p><a href="https://en.wikipedia.org/wiki/Malla-yuddha" target="_blank" rel="noopener">Malla-yuddha ↗</a><br>
+            <a href="https://en.wikipedia.org/wiki/Pehlwani" target="_blank" rel="noopener">Pehlwani ↗</a><br>
+            <a href="https://en.wikipedia.org/wiki/Shastar_Vidya" target="_blank" rel="noopener">Shastar Vidya ↗</a><br>
+            <a href="https://en.wikipedia.org/wiki/Great_Gama" target="_blank" rel="noopener">The Great Gama ↗</a><br>
+            <a href="https://en.wikipedia.org/wiki/Dara_Singh" target="_blank" rel="noopener">Dara Singh ↗</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CTA ══════════ -->
+    <section class="page-cta">
+      <div class="container">
+        <h2 class="page-cta__title">The Next Chapter Is Yours.</h2>
+        <p class="page-cta__sub">Five centuries of akhara tradition — and the story continues here in Coventry. Join us, and write your own chapter.</p>
+        <a class="btn btn--dark" href="join.html">Become a Member <span class="btn__arrow">→</span></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__logo"><img src="assets/img/logo.jpg" alt="Khalsa Akhara Wrestling Coventry club logo"></span>
+          <span class="brand__text">
+            <strong>Khalsa Akhara</strong>
+            <em>Wrestling Coventry</em>
+          </span>
+        </a>
+        <p>The home of traditional Punjabi wrestling in Coventry. Discipline, honour and brotherhood — on the mat and beyond.</p>
+        <div class="footer__socials" aria-label="Social media">
+          <a class="social" href="https://www.facebook.com/khalsaakharagym" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5Z"/></svg></a>
+          <a class="social" href="https://www.instagram.com/khalsaakharawrestling/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="social" href="https://www.youtube.com/@CoventryWrestling" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.9C18.2 5 12 5 12 5s-6.2 0-7.8.3A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.9c1.6.3 7.8.3 7.8.3s6.2 0 7.8-.3a2.6 2.6 0 0 0 1.8-1.9A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8ZM10 15.2V8.8L15.5 12 10 15.2Z"/></svg></a>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="Footer">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="rules.html">Rules of the Akhara</a>
+        <a href="history.html">Wrestling History</a>
+        <a href="benefits.html">Benefits of Wrestling</a>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#media">Media</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="join.html">Become a Member</a>
+      </nav>
+
+      <div class="footer__col">
+        <h4>Our Values</h4>
+        <p class="footer__values">Honesty • Integrity • Respect • Empathy • Kindness • Humility • Compassion</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <p>35-50 Cross Rd,<br>Coventry CV6 5GU, UK</p>
+        <p><strong>Welfare officers</strong><br>Gurpreet Singh &amp; H S Dhaliwal</p>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <div class="container footer__bar-inner">
+        <p>© 2026 Khalsa Akhara Wrestling Coventry. All rights reserved.</p>
+        <p class="punjabi footer__punjabi">ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
