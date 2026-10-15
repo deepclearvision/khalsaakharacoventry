@@ -102,6 +102,14 @@
     menu.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', closeMenu);
     });
+    /* Collapsible About Us group in the mobile menu */
+    menu.querySelectorAll('.mob-fold__toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var fold = btn.closest('.mob-fold');
+        var open = fold.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', String(open));
+      });
+    });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') closeMenu();
     });

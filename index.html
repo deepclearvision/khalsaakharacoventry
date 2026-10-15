@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Mukta+Mahee:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
 
@@ -69,10 +69,15 @@
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <nav class="mobile-menu__nav" aria-label="Mobile">
       <a href="#home">Home</a>
-      <a href="#about">About Us</a>
-      <a href="rules.html">Rules of the Akhara</a>
-      <a href="history.html">Wrestling History</a>
-      <a href="benefits.html">Benefits of Wrestling</a>
+      <div class="mob-fold">
+        <button type="button" class="mob-fold__toggle" aria-expanded="false" aria-controls="mobAboutLinks">About Us <svg class="mob-fold__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="mob-fold__panel" id="mobAboutLinks">
+          <a href="#about">About Us</a>
+          <a href="rules.html">Rules of the Akhara</a>
+          <a href="history.html">Wrestling History</a>
+          <a href="benefits.html">Benefits of Wrestling</a>
+        </div>
+      </div>
       <a href="shop.html">Shop</a>
       <a href="#media">Media</a>
       <a href="#contact">Contact</a>
@@ -673,6 +678,6 @@
 
   <audio id="anthem" src="assets/audio/anthem.mp3" loop preload="auto"></audio>
 
-  <script src="js/main.js?v=3"></script>
+  <script src="js/main.js?v=4"></script>
 </body>
 </html>

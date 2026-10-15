@@ -325,6 +325,40 @@ svg { display: block; }
 }
 .mobile-menu__nav a:hover { color: var(--orange-hot); padding-left: 14px; }
 .mobile-menu__nav a.mobile-menu__cta { color: var(--orange); border-bottom: 0; }
+
+/* Collapsible About Us group in the mobile menu */
+.mob-fold__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 13px 6px;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 5.6vw, 2.1rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+  transition: color 0.25s, padding-left 0.25s;
+}
+.mob-fold__toggle:hover { color: var(--orange-hot); padding-left: 14px; }
+.mob-fold__chev { width: clamp(14px, 4.5vw, 20px); height: clamp(14px, 4.5vw, 20px); flex-shrink: 0; transition: transform 0.3s; }
+.mob-fold.is-open .mob-fold__chev { transform: rotate(180deg); }
+.mob-fold__panel { display: none; }
+.mob-fold.is-open .mob-fold__panel { display: block; }
+.mob-fold__panel a {
+  display: block;
+  font-size: clamp(1.05rem, 4vw, 1.3rem);
+  color: var(--muted-2);
+  padding: 11px 6px 11px 24px;
+  border-bottom: 1px solid var(--line);
+  transition: color 0.25s, padding-left 0.25s;
+}
+.mob-fold__panel a:hover { color: var(--orange-hot); padding-left: 30px; }
 .mobile-menu__socials { display: flex; gap: 12px; }
 .mobile-menu__socials .social {
   width: 46px; height: 46px;
