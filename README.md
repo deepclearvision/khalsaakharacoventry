@@ -10,7 +10,7 @@ the membership form, automated welcome emails, and the admin dashboard.
 | `index.html`, `css/style.css`, `js/main.js` | The main one-pager (hero slider, about, shop teaser, media, contact) |
 | `join.html`, `js/join.js` | **Membership form** — two-step wizard, posts to the backend |
 | `shop.html` | Club shop — 11 products, orders placed through the official Bludog store |
-| `rules.html` / `history.html` / `benefits.html` | About Us pages (shared `css/page.css`) |
+| `rules.html` / `history.html` / `benefits.html` / `coaches.html` | About Us pages (shared `css/page.css`) |
 | `server.js` | Zero-dependency Node server — serves the site, the API, and sends welcome emails |
 | `admin.html`, `admin.css`, `admin.js` | The club dashboard: members, payments, prospects and messages |
 | `docs/member-onboarding.html` | Print-ready New Wrestler Onboarding Pack — with a "Download PDF" button serving `docs/member-onboarding.pdf` |
