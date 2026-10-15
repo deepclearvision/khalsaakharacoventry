@@ -26,7 +26,7 @@
   var adult = document.getElementById('branchAdult');
 
   function currentBranch() {
-    var checked = form.querySelector('input[name="branch"]:checked');
+    var checked = document.querySelector('input[name="branch"]:checked');
     return checked ? checked.value : '';
   }
 
@@ -36,7 +36,7 @@
     if (adult) { adult.hidden = val !== 'adult';  adult.disabled = val !== 'adult'; }
   }
 
-  form.querySelectorAll('input[name="branch"]').forEach(function (r) {
+  document.querySelectorAll('input[name="branch"]').forEach(function (r) {
     r.addEventListener('change', syncBranch);
   });
 
@@ -83,6 +83,8 @@
     if (!form.checkValidity()) { form.reportValidity(); return; }
 
     var data = Object.fromEntries(new FormData(form).entries());
+    /* the agegate radios live in step 1, outside the form — send them along */
+    if (!data.branch) data.branch = currentBranch();
     var btn = form.querySelector('button[type="submit"]');
     btn.disabled = true;
     try {
@@ -140,7 +142,7 @@
     if (!name && !wrestler) return;
 
     var under16 = age !== null && parseInt(age, 10) < 16;
-    var radio = form.querySelector('input[name="branch"][value="' + (under16 ? 'u16' : 'adult') + '"]');
+    var radio = document.querySelector('input[name="branch"][value="' + (under16 ? 'u16' : 'adult') + '"]');
     if (radio) radio.checked = true;
     syncBranch();
 
