@@ -126,7 +126,11 @@
       }
     } catch (err) {
       if (memberErr) {
-        memberErr.textContent = 'Could not reach the server. Please try again in a moment.';
+        if (location.protocol === 'file:') {
+          memberErr.innerHTML = 'This page is open straight from the folder, so it can&rsquo;t reach the club server. Open <a href="http://127.0.0.1:8000/join.html" style="color:var(--orange-hot);">http://127.0.0.1:8000/join.html</a> in your browser and submit there.';
+        } else {
+          memberErr.textContent = 'Could not reach the server. Please try again in a moment.';
+        }
         memberErr.hidden = false;
       }
     } finally {

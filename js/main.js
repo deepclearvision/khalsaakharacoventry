@@ -335,7 +335,9 @@
         }
       } catch (err) {
         if (errorEl) {
-          errorEl.textContent = 'Could not reach the server. Make sure it is running (node server.js) and try again.';
+          errorEl.innerHTML = location.protocol === 'file:'
+            ? 'This page is open straight from the folder, so it can&rsquo;t reach the club server. Open <a href="http://127.0.0.1:8000/" style="color:var(--orange-hot);">http://127.0.0.1:8000</a> in your browser and try there.'
+            : 'Could not reach the server. Make sure it is running (node server.js) and try again.';
           errorEl.hidden = false;
         }
       } finally {
