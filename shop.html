@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Club Shop — Khalsa Akhara Wrestling Coventry</title>
+  <meta name="description" content="Official Khalsa Akhara Wrestling Coventry club kit — t-shirts, hoodies, joggers and shorts for adults and kids, fulfilled by the official Bludog store.">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Mukta+Mahee:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/page.css">
+</head>
+<body>
+
+  <!-- ══════════ GLOBAL TEXTURE & AMBIENT LAYERS ══════════ -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="ambient" aria-hidden="true">
+    <span class="ambient__orb ambient__orb--1"></span>
+    <span class="ambient__orb ambient__orb--2"></span>
+  </div>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <header class="site-head" id="siteHead">
+    <a class="brand" href="index.html" aria-label="Khalsa Akhara Wrestling Coventry — home">
+      <span class="brand__logo"><img src="assets/img/logo.jpg" alt="Khalsa Akhara Wrestling Coventry club logo"></span>
+      <span class="brand__text">
+        <strong>Khalsa Akhara</strong>
+        <em>Wrestling Coventry</em>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <a href="index.html" class="main-nav__link">Home</a>
+      <div class="main-nav__drop">
+        <button type="button" class="main-nav__link main-nav__dropbtn" id="aboutDropBtn" aria-haspopup="true" aria-expanded="false">About Us <span class="main-nav__caret" aria-hidden="true">▾</span></button>
+        <div class="main-nav__menu" id="aboutDropMenu">
+          <a href="index.html#about">About Us</a>
+          <a href="rules.html">Rules of the Akhara</a>
+          <a href="history.html">Wrestling History</a>
+          <a href="benefits.html">Benefits of Wrestling</a>
+        </div>
+      </div>
+      <a href="shop.html" class="main-nav__link is-active">Shop</a>
+      <a href="index.html#media" class="main-nav__link">Media</a>
+      <a href="index.html#contact" class="main-nav__link">Contact</a>
+    </nav>
+
+    <div class="head-actions">
+      <div class="head-socials" aria-label="Social media">
+        <a class="social" href="https://www.facebook.com/khalsaakharagym" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5Z"/></svg></a>
+        <a class="social" href="https://www.instagram.com/khalsaakharawrestling/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a class="social" href="https://www.youtube.com/@CoventryWrestling" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.9C18.2 5 12 5 12 5s-6.2 0-7.8.3A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.9c1.6.3 7.8.3 7.8.3s6.2 0 7.8-.3a2.6 2.6 0 0 0 1.8-1.9A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8ZM10 15.2V8.8L15.5 12 10 15.2Z"/></svg></a>
+      </div>
+      <a href="join.html" class="btn btn--solid btn--sm head-cta">Become a Member</a>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MOBILE MENU ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__nav" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About Us</a>
+      <a href="rules.html">Rules of the Akhara</a>
+      <a href="history.html">Wrestling History</a>
+      <a href="benefits.html">Benefits of Wrestling</a>
+      <a href="shop.html">Shop</a>
+      <a href="index.html#media">Media</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="join.html" class="mobile-menu__cta">Become a Member</a>
+    </nav>
+    <div class="mobile-menu__socials" aria-label="Social media">
+      <a class="social" href="https://www.facebook.com/khalsaakharagym" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5Z"/></svg></a>
+      <a class="social" href="https://www.instagram.com/khalsaakharawrestling/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a class="social" href="https://www.youtube.com/@CoventryWrestling" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.9C18.2 5 12 5 12 5s-6.2 0-7.8.3A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.9c1.6.3 7.8.3 7.8.3s6.2 0 7.8-.3a2.6 2.6 0 0 0 1.8-1.9A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8ZM10 15.2V8.8L15.5 12 10 15.2Z"/></svg></a>
+    </div>
+    <div class="mobile-menu__foot">
+      <span class="punjabi">ਖਾਲਸਾ ਅਖਾੜਾ</span>
+      <span>Honesty • Integrity • Respect</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ══════════ PAGE HERO ══════════ -->
+    <section class="page-hero" style="background-image:url('assets/img/gallery-1.jpg')">
+      <div class="container page-hero__inner">
+        <p class="kicker">Official Club Kit</p>
+        <h1 class="page-hero__title">The Club <span class="accent">Shop</span></h1>
+        <p class="page-hero__sub">Train and compete in the colours of the akhara. Every item is official Khalsa Akhara Wrestling Coventry kit — ordered through our official Bludog store, delivered straight to your door.</p>
+        <nav class="page-hero__crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">/</span>
+          <span>Shop</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ══════════ PRODUCTS ══════════ -->
+    <section class="page-section" id="shop">
+      <div class="container">
+
+        <div class="shop-toolbar">
+          <div class="shop-filter" role="group" aria-label="Filter products">
+            <button type="button" class="filter-chip is-active" data-filter="all">All</button>
+            <button type="button" class="filter-chip" data-filter="adult">Adults</button>
+            <button type="button" class="filter-chip" data-filter="kids">Kids</button>
+          </div>
+          <p class="shop-count" id="shopCount">11 products</p>
+        </div>
+
+        <div class="shop-grid" id="shopGrid">
+
+          <!-- Adults -->
+          <article class="product" data-cat="adult">
+            <div class="product__media">
+              <img src="assets/img/shop/tshirt-adult.jpg" alt="Wrestlers T Shirt — Khalsa Akhara club tee">
+              <span class="product__stamp"><img src="assets/img/logo.jpg" alt=""></span>
+            </div>
+            <div class="product__body">
+              <p class="product__cat">Adult</p>
+              <h2 class="product__title">Wrestlers T Shirt</h2>
+              <p class="product__price">£10.00 <em>excl. VAT</em></p>
+              <a class="btn btn--solid btn--sm" href="https://bludog.co.uk/khalsa-akhara-gym-jc001.html" target="_blank" rel="noopener">Order Now <span class="btn__arrow">↗</span></a>
+            </div>
+          </article>
+
+          <article class="product" data-cat="adult">
+            <div class="product__media">
+              <img src="assets/img/shop/hoodie-adult.jpg" alt="Wrestlers Cottonridge Hoodie — Khalsa Akhara club hoodie">
+              <span class="product__stamp"><img src="assets/img/logo.jpg" alt=""></span>
+            </div>
+            <div class="product__body">
+              <p class="product__cat">Adult</p>
+              <h2 class="product__title">Cottonridge Hoodie</h2>
+              <p class="product__price">£16.67 <em>excl. VAT</em></p>
+              <a class="btn btn--solid btn--sm" href="https://bludog.co.uk/wrestlers-cottonridge-hoodie.html" target="_blank" rel="noopener">Order Now <span class="btn__arrow">↗</span></a>
+            </div>
+          </article>
+
+          <article class="product" data-cat="adult">
+            <div class="product__media">
+              <img src="assets/img/shop/hoodie-zip-adult.jpg" alt="Wrestlers Cottonridge Zip Hoodie — Khalsa Akhara club zip hoodie">
+              <span class="product__stamp"><img src="assets/img/logo.jpg" alt=""></span>
+            </div>
+            <div class="product__body">
+              <p class="product__cat">Adult</p>
+              <h2 class="product__title">Cottonridge Zip Hoodie</h2>
+              <p class="product__price">£20.00 <em>excl. VAT</em></p>
+              <a class="btn btn--solid btn--sm" href="https://bludog.co.uk/wrestlers-cottonridge-zip-hoodie.html" target="_blank" rel="noopener">Order Now <span class="btn__arrow">↗</span></a>
+            </div>
+          </article>
+
+          <article class="product" data-cat="adult">
+            <div class="product__media">
+              <img src="assets/img/shop/sweatshirt-adult.jpg" alt="Wrestlers Sweatshirt — Khalsa Akhara club sweatshirt">
+              <span class="product__stamp"><img src="assets/img/logo.jpg" alt=""></span>
+            </div>
+            <div class="product__body">
+              <p class="product__cat">Adult</p>
+              <h2 class="product__title">Wrestlers Sweatshirt</h2>
+              <p class="product__price">£14.40 <em>excl. VAT</em></p>
+              <a class="btn btn--solid btn--sm" href="https://bludog.co.uk/wrestlers-sweatshirt.html" target="_blank" rel="noopener">Order Now <span class="btn__arrow">↗</span></a>
+            </div>
+          </article>
+
+          <article class="product" data-cat="adult">
+            <div class="product__media">
+              <img src="assets/img/shop/joggers-adult.jpg" alt="Wrestlers Russell Joggers — Khalsa Akhara club joggers">
+              <span class="product__stamp"><img src="assets/img/logo.jpg" alt=""></span>
+            </div>
+            <div class="product__body">
+              <p class="product__cat">Adult</p>
+              <h2 class="product__title">Russell Joggers</h2>
+              <p class="product__price">£23.33 <em>excl. VAT</em></p>
+              <a class="btn btn--solid btn--sm" href="https://bludog.co.uk/khalsa-akhara-gym-268m.html" target="_blank" rel="noopener">Order Now <span class="btn__arrow">↗</span></a>
+            </div>
+          </article>
+
+          <article class="product" data-cat="adult">
+            <div class="product__media">
+              <img src="assets/img/shop/shorts-adult.jpg" alt="Wrestlers Shorts — Khalsa Akhara club shorts">
+              <span class="product__stamp"><img src="assets/img/logo.jpg" alt=""></span>
+            </div>
+            <div class="product__body">
+              <p class="product__cat">Adult</p>
+              <h2 class="product__title">Wrestlers Shorts</h2>
+              <p class="product__price">£12.00 <em>excl. VAT</em></p>
+              <a class="btn btn--solid btn--sm" href="https://bludog.co.uk/wrestlers-shorts-adults.html" target="_blank" rel="noopener">Order Now <span class="btn__arrow">↗</span></a>
+            </div>
+          </article>
+
+          <!-- Kids -->
+          <article class="product" data-cat="kids">
+            <div class="product__media">
+              <img src="assets/img/shop/tshirt-kids.jpg" alt="Kids Wrestlers T Shirt — Khalsa Akhara junior club tee">
+              <span class="product__stamp"><img src="assets/img/logo.jpg" alt=""></span>
+            </div>
+            <div class="product__body">
+              <p class="product__cat">Kids</p>
+              <h2 class="product__title">Wrestlers T Shirt</h2>
+              <p class="product__price">£8.00 <em>excl. VAT</em></p>
+              <a class="btn btn--solid btn--sm" href="https://bludog.co.uk/wrestlers-t-shirt-kids.html" target="_blank" rel="noopener">Order Now <span class="btn__arrow">↗</span></a>
+            </div>
+          </article>
+
+          <article class="product" data-cat="kids">
+            <div class="product__media">
+              <img src="assets/img/shop/hoodie-kids.jpg" alt="Kids Wrestlers Cottonridge Hoodie — Khalsa Akhara junior hoodie">
+              <span class="product__stamp"><img src="assets/img/logo.jpg" alt=""></span>
+            </div>
+            <div class="product__body">
+              <p class="product__cat">Kids</p>
+              <h2 class="product__title">Cottonridge Hoodie</h2>
+              <p class="product__price">£15.00 <em>excl. VAT</em></p>
+              <a class="btn btn--solid btn--sm" href="https://bludog.co.uk/wrestlers-cottonridge-hoodie-kids.html" target="_blank" rel="noopener">Order Now <span class="btn__arrow">↗</span></a>
+            </div>
+          </article>
+
+          <article class="product" data-cat="kids">
+            <div class="product__media">
+              <img src="assets/img/shop/sweatshirt-kids.jpg" alt="Kids Wrestlers Sweatshirt — Khalsa Akhara junior sweatshirt">
+              <span class="product__stamp"><img src="assets/img/logo.jpg" alt=""></span>
+            </div>
+            <div class="product__body">
+              <p class="product__cat">Kids</p>
+              <h2 class="product__title">Wrestlers Sweatshirt</h2>
+              <p class="product__price">£15.00 <em>excl. VAT</em></p>
+              <a class="btn btn--solid btn--sm" href="https://bludog.co.uk/wrestlers-sweatshirt-kids.html" target="_blank" rel="noopener">Order Now <span class="btn__arrow">↗</span></a>
+            </div>
+          </article>
+
+          <article class="product" data-cat="kids">
+            <div class="product__media">
+              <img src="assets/img/shop/joggers-kids.jpg" alt="Kids Wrestlers Russell Sweatpants — Khalsa Akhara junior joggers">
+              <span class="product__stamp"><img src="assets/img/logo.jpg" alt=""></span>
+            </div>
+            <div class="product__body">
+              <p class="product__cat">Kids</p>
+              <h2 class="product__title">Russell Sweatpants</h2>
+              <p class="product__price">£15.00 <em>excl. VAT</em></p>
+              <a class="btn btn--solid btn--sm" href="https://bludog.co.uk/wrestlers-russell-sweatpants-kids.html" target="_blank" rel="noopener">Order Now <span class="btn__arrow">↗</span></a>
+            </div>
+          </article>
+
+          <article class="product" data-cat="kids">
+            <div class="product__media">
+              <img src="assets/img/shop/shorts-kids.jpg" alt="Kids Wrestlers Shorts — Khalsa Akhara junior shorts">
+              <span class="product__stamp"><img src="assets/img/logo.jpg" alt=""></span>
+            </div>
+            <div class="product__body">
+              <p class="product__cat">Kids</p>
+              <h2 class="product__title">Wrestlers Shorts</h2>
+              <p class="product__price">£12.00 <em>excl. VAT</em></p>
+              <a class="btn btn--solid btn--sm" href="https://bludog.co.uk/wrestlers-shorts-kids.html" target="_blank" rel="noopener">Order Now <span class="btn__arrow">↗</span></a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="shop-note reveal">Prices shown exclude VAT. Every order is placed through our official <a href="https://bludog.co.uk/portal/khalsa-akhara-wrestling.html" target="_blank" rel="noopener">Bludog store</a> — supporting the akhara with every purchase. Sizing questions? Ask at your session or <a href="index.html#contact">contact the club</a>.</p>
+
+      </div>
+    </section>
+
+    <!-- ══════════ CTA ══════════ -->
+    <section class="page-cta">
+      <div class="container">
+        <h2 class="page-cta__title">Wear It. Train In It.<br>Compete In It.</h2>
+        <p class="page-cta__sub">Club kit looks its best on the mat. Join the akhara and earn the right to wear the colours.</p>
+        <a class="btn btn--dark" href="join.html">Become a Member <span class="btn__arrow">→</span></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__logo"><img src="assets/img/logo.jpg" alt="Khalsa Akhara Wrestling Coventry club logo"></span>
+          <span class="brand__text">
+            <strong>Khalsa Akhara</strong>
+            <em>Wrestling Coventry</em>
+          </span>
+        </a>
+        <p>The home of traditional Punjabi wrestling in Coventry. Discipline, honour and brotherhood — on the mat and beyond.</p>
+        <div class="footer__socials" aria-label="Social media">
+          <a class="social" href="https://www.facebook.com/khalsaakharagym" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5Z"/></svg></a>
+          <a class="social" href="https://www.instagram.com/khalsaakharawrestling/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="social" href="https://www.youtube.com/@CoventryWrestling" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.9C18.2 5 12 5 12 5s-6.2 0-7.8.3A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.9c1.6.3 7.8.3 7.8.3s6.2 0 7.8-.3a2.6 2.6 0 0 0 1.8-1.9A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8ZM10 15.2V8.8L15.5 12 10 15.2Z"/></svg></a>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="Footer">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="rules.html">Rules of the Akhara</a>
+        <a href="history.html">Wrestling History</a>
+        <a href="benefits.html">Benefits of Wrestling</a>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#media">Media</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="join.html">Become a Member</a>
+      </nav>
+
+      <div class="footer__col">
+        <h4>Our Values</h4>
+        <p class="footer__values">Honesty • Integrity • Respect • Empathy • Kindness • Humility • Compassion</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <p>35-50 Cross Rd,<br>Coventry CV6 5GU, UK</p>
+        <p><strong>Welfare officers</strong><br>Gurpreet Singh &amp; H S Dhaliwal</p>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <div class="container footer__bar-inner">
+        <p>© 2026 Khalsa Akhara Wrestling Coventry. All rights reserved.</p>
+        <p class="punjabi footer__punjabi">ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    /* Shop filter — All / Adults / Kids */
+    (function () {
+      var chips  = document.querySelectorAll('.filter-chip');
+      var cards  = document.querySelectorAll('#shopGrid .product');
+      var count  = document.getElementById('shopCount');
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          chips.forEach(function (c) { c.classList.remove('is-active'); });
+          chip.classList.add('is-active');
+          var f = chip.dataset.filter;
+          var shown = 0;
+          cards.forEach(function (card) {
+            var show = f === 'all' || card.dataset.cat === f;
+            card.classList.toggle('product--hidden', !show);
+            if (show) shown++;
+          });
+          if (count) count.textContent = shown + (shown === 1 ? ' product' : ' products');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

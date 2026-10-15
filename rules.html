@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rules of the Akhara — Khalsa Akhara Wrestling Coventry</title>
+  <meta name="description" content="The rules of the akhara at Khalsa Akhara Wrestling Coventry — general rules, behaviour, safety and welfare. A safe, respectful mat for every wrestler.">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Mukta+Mahee:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/page.css">
+</head>
+<body>
+
+  <!-- ══════════ GLOBAL TEXTURE & AMBIENT LAYERS ══════════ -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="ambient" aria-hidden="true">
+    <span class="ambient__orb ambient__orb--1"></span>
+    <span class="ambient__orb ambient__orb--2"></span>
+  </div>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <header class="site-head" id="siteHead">
+    <a class="brand" href="index.html" aria-label="Khalsa Akhara Wrestling Coventry — home">
+      <span class="brand__logo"><img src="assets/img/logo.jpg" alt="Khalsa Akhara Wrestling Coventry club logo"></span>
+      <span class="brand__text">
+        <strong>Khalsa Akhara</strong>
+        <em>Wrestling Coventry</em>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <a href="index.html" class="main-nav__link">Home</a>
+      <div class="main-nav__drop">
+        <button type="button" class="main-nav__link main-nav__dropbtn is-active" id="aboutDropBtn" aria-haspopup="true" aria-expanded="false">About Us <span class="main-nav__caret" aria-hidden="true">▾</span></button>
+        <div class="main-nav__menu" id="aboutDropMenu">
+          <a href="index.html#about">About Us</a>
+          <a href="rules.html">Rules of the Akhara</a>
+          <a href="history.html">Wrestling History</a>
+          <a href="benefits.html">Benefits of Wrestling</a>
+        </div>
+      </div>
+      <a href="shop.html" class="main-nav__link">Shop</a>
+      <a href="index.html#media" class="main-nav__link">Media</a>
+      <a href="index.html#contact" class="main-nav__link">Contact</a>
+    </nav>
+
+    <div class="head-actions">
+      <div class="head-socials" aria-label="Social media">
+        <a class="social" href="https://www.facebook.com/khalsaakharagym" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5Z"/></svg></a>
+        <a class="social" href="https://www.instagram.com/khalsaakharawrestling/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a class="social" href="https://www.youtube.com/@CoventryWrestling" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.9C18.2 5 12 5 12 5s-6.2 0-7.8.3A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.9c1.6.3 7.8.3 7.8.3s6.2 0 7.8-.3a2.6 2.6 0 0 0 1.8-1.9A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8ZM10 15.2V8.8L15.5 12 10 15.2Z"/></svg></a>
+      </div>
+      <a href="join.html" class="btn btn--solid btn--sm head-cta">Become a Member</a>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MOBILE MENU ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__nav" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About Us</a>
+      <a href="rules.html">Rules of the Akhara</a>
+      <a href="history.html">Wrestling History</a>
+      <a href="benefits.html">Benefits of Wrestling</a>
+      <a href="shop.html">Shop</a>
+      <a href="index.html#media">Media</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="join.html" class="mobile-menu__cta">Become a Member</a>
+    </nav>
+    <div class="mobile-menu__socials" aria-label="Social media">
+      <a class="social" href="https://www.facebook.com/khalsaakharagym" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5Z"/></svg></a>
+      <a class="social" href="https://www.instagram.com/khalsaakharawrestling/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a class="social" href="https://www.youtube.com/@CoventryWrestling" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.9C18.2 5 12 5 12 5s-6.2 0-7.8.3A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.9c1.6.3 7.8.3 7.8.3s6.2 0 7.8-.3a2.6 2.6 0 0 0 1.8-1.9A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8ZM10 15.2V8.8L15.5 12 10 15.2Z"/></svg></a>
+    </div>
+    <div class="mobile-menu__foot">
+      <span class="punjabi">ਖਾਲਸਾ ਅਖਾੜਾ</span>
+      <span>Honesty • Integrity • Respect</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ══════════ PAGE HERO ══════════ -->
+    <section class="page-hero" style="background-image:url('assets/img/about-2.jpg')">
+      <div class="container page-hero__inner">
+        <p class="kicker">About Us • Discipline &amp; Respect</p>
+        <h1 class="page-hero__title">Rules of the <span class="accent">Akhara</span></h1>
+        <p class="page-hero__sub">A few simple rules keep the mat safe, clean and respectful for everyone — from our youngest wrestler to our veterans. They&rsquo;re how we train, how we compete, and how we treat each other.</p>
+        <nav class="page-hero__crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">/</span>
+          <a href="index.html#about">About Us</a>
+          <span class="sep">/</span>
+          <span>Rules of the Akhara</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ══════════ GENERAL RULES ══════════ -->
+    <section class="page-section" id="rules">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">The Basics</p>
+          <h2 class="section-title">General <span class="accent">Rules</span></h2>
+          <p class="section-intro">Every akhara has stood on rules for centuries. Ours are simple — follow them and everyone gets the best of the mat.</p>
+        </div>
+
+        <div class="content-grid">
+          <div class="steps reveal">
+            <div class="step"><span class="step__num">1</span><div><strong>No shoes on the mat — ever</strong><p>Outdoor footwear stays outside the wrestling area. Mats are cleaned and disinfected after every single session; a clean mat is a safe mat.</p></div></div>
+            <div class="step"><span class="step__num">2</span><div><strong>No food inside the training area</strong><p>Eat before or after the session, never on the mats. Water bottles are welcome.</p></div></div>
+            <div class="step"><span class="step__num">3</span><div><strong>Wear the right kit</strong><p>Comfortable sports clothing with no zips, buttons or sharp edges. No jewellery or watches on the mat.</p></div></div>
+            <div class="step"><span class="step__num">4</span><div><strong>Follow the coach — first time, every time</strong><p>Coaches keep everyone safe. Instructions are for your safety as much as your progress.</p></div></div>
+            <div class="step"><span class="step__num">5</span><div><strong>Look after the venue</strong><p>Leave the akhara as you found it — tidy kit, rubbish in the bin, everything respected.</p></div></div>
+            <div class="step"><span class="step__num">6</span><div><strong>Support from the sidelines</strong><p>Parents and guardians cheer everyone on — coaching is left to the coaches.</p></div></div>
+          </div>
+
+          <div class="reveal" style="--d:.1s; display:flex; flex-direction:column; gap:24px;">
+            <div class="panel panel--orange">
+              <h3>Behaviour — <span class="accent">On and Off the Mat</span></h3>
+              <p>Treat everyone with respect — coaches, teammates, opponents and visitors. Win with humility, lose with grace, and always shake hands. No swearing, no bullying, no bad attitudes. The way you behave in the akhara is the way you represent the club everywhere else.</p>
+            </div>
+            <div class="quote">
+              <p>The mat is a place where everyone belongs.</p>
+              <cite>— Khalsa Akhara, zero-tolerance promise</cite>
+            </div>
+            <div class="chips">
+              <span class="chip">Honesty</span>
+              <span class="chip">Integrity</span>
+              <span class="chip">Respect</span>
+              <span class="chip">Empathy</span>
+              <span class="chip">Kindness</span>
+              <span class="chip">Humility</span>
+              <span class="chip">Compassion</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ SAFETY ══════════ -->
+    <section class="page-section page-section--tight" id="safety" style="background:linear-gradient(180deg, rgba(240,144,0,0.04), transparent);">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Safety First</p>
+          <h2 class="section-title">Safety &amp; <span class="accent">Welfare</span></h2>
+          <p class="section-intro">Wrestling is a contact sport — these rules keep every wrestler safe, healthy and able to train at their best.</p>
+        </div>
+
+        <div class="steps reveal">
+          <div class="step"><span class="step__num">◆</span><div><strong>Kakars are securely covered at all times</strong><p>Kakars must be covered securely and safely before stepping onto the mat — for your protection and everyone else&rsquo;s.</p></div></div>
+          <div class="step"><span class="step__num">◆</span><div><strong>Infections and open wounds — stay home</strong><p>Do not train with any infection or open wound. Wrestlers must stay off the mat until fully healed and cleared to return.</p></div></div>
+          <div class="step"><span class="step__num">◆</span><div><strong>Keep nails short</strong><p>Short fingernails and toenails prevent cuts and scratches for you and your training partners.</p></div></div>
+          <div class="step"><span class="step__num">◆</span><div><strong>Report every injury straight away</strong><p>Even a small knock. Coaches carry first-aid support at every session and need to know immediately.</p></div></div>
+          <div class="step"><span class="step__num">◆</span><div><strong>Warm up properly</strong><p>Never skip the warm-up — it&rsquo;s the foundation of every safe session.</p></div></div>
+        </div>
+
+        <div class="content-grid" style="margin-top:26px;">
+          <div class="panel reveal">
+            <h3>Attendance — <span class="accent">the 75% ethos</span></h3>
+            <p>Wrestlers commit to <strong>75% attendance</strong>. Excellence on the mat is built on consistency — every session missed is progress missed, so commit to showing up.</p>
+          </div>
+          <div class="panel reveal" style="--d:.08s;">
+            <h3>Competitions — <span class="accent">the squad pathway</span></h3>
+            <p>Competition places are earned through attendance, attitude and progress. Coaches select the squad for each event — and every wrestler, at every level, gets a clear path onto the tournament mat.</p>
+          </div>
+        </div>
+
+        <div class="panel panel--orange reveal" style="margin-top:26px;">
+          <h3>Your Welfare Officers — <span class="accent">Always Here to Help</span></h3>
+          <p><strong style="color:var(--text);">Gurpreet Singh</strong> &amp; <strong style="color:var(--text);">H S Dhaliwal</strong> are the club&rsquo;s welfare officers. Any concern — big or small — about safety, wellbeing or anything at all: speak to a welfare officer or any coach. Every concern is taken seriously, and every conversation is handled with care.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CTA ══════════ -->
+    <section class="page-cta">
+      <div class="container">
+        <h2 class="page-cta__title">Know the Rules.<br>Live the Values.</h2>
+        <p class="page-cta__sub">That&rsquo;s all it takes to belong in the akhara. Step onto the mat and our coaches take it from there.</p>
+        <a class="btn btn--dark" href="join.html">Become a Member <span class="btn__arrow">→</span></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__logo"><img src="assets/img/logo.jpg" alt="Khalsa Akhara Wrestling Coventry club logo"></span>
+          <span class="brand__text">
+            <strong>Khalsa Akhara</strong>
+            <em>Wrestling Coventry</em>
+          </span>
+        </a>
+        <p>The home of traditional Punjabi wrestling in Coventry. Discipline, honour and brotherhood — on the mat and beyond.</p>
+        <div class="footer__socials" aria-label="Social media">
+          <a class="social" href="https://www.facebook.com/khalsaakharagym" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5Z"/></svg></a>
+          <a class="social" href="https://www.instagram.com/khalsaakharawrestling/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="social" href="https://www.youtube.com/@CoventryWrestling" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.9C18.2 5 12 5 12 5s-6.2 0-7.8.3A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.9c1.6.3 7.8.3 7.8.3s6.2 0 7.8-.3a2.6 2.6 0 0 0 1.8-1.9A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8ZM10 15.2V8.8L15.5 12 10 15.2Z"/></svg></a>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="Footer">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="rules.html">Rules of the Akhara</a>
+        <a href="history.html">Wrestling History</a>
+        <a href="benefits.html">Benefits of Wrestling</a>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#media">Media</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="join.html">Become a Member</a>
+      </nav>
+
+      <div class="footer__col">
+        <h4>Our Values</h4>
+        <p class="footer__values">Honesty • Integrity • Respect • Empathy • Kindness • Humility • Compassion</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <p>35-50 Cross Rd,<br>Coventry CV6 5GU, UK</p>
+        <p><strong>Welfare officers</strong><br>Gurpreet Singh &amp; H S Dhaliwal</p>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <div class="container footer__bar-inner">
+        <p>© 2026 Khalsa Akhara Wrestling Coventry. All rights reserved.</p>
+        <p class="punjabi footer__punjabi">ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

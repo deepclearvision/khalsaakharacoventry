@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Private / local-only — never commit
+# the SQLite database (local source of truth)
+data/
+# admin password hash + email key
+config.json
+# local helper scripts
+tools/
+
+# Logs & OS noise
+*.log
+Thumbs.db
+.DS_Store
+
+# Local photos, videos and club documents — not part of the site,
+# keep them out of the public GitHub repo
+/*.jpg
+/*.mp4
+/*.pdf

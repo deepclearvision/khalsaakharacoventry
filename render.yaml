@@ -1,0 +1,27 @@
+# Render blueprint — deploy with "New + → Blueprint" (free tier)
+services:
+  - type: web
+    name: khalsa-akhara-wrestling
+    runtime: node
+    plan: free
+    buildCommand: ""            # nothing to build — zero dependencies
+    startCommand: node server.js
+    envVars:
+      - key: NODE_VERSION
+        value: 22.14.0
+      - key: HOST
+        value: 0.0.0.0
+      - key: TRUST_PROXY
+        value: "1"              # rate-limit by the visitor's real IP (X-Forwarded-For)
+      - key: ADMIN_PASSWORD
+        sync: false             # set to a strong password in the Render dashboard
+      - key: RESEND_API_KEY
+        sync: false             # optional — welcome emails (Resend free tier)
+      - key: EMAIL_FROM
+        sync: false             # optional — e.g. Khalsa Akhara <onboarding@resend.dev>
+      - key: SITE_URL
+        sync: false             # e.g. https://khalsa-akhara.onrender.com
+      - key: GOCARDLESS_URL
+        sync: false             # optional — placeholder until the real plan link exists
+      - key: NOTIFY_EMAIL
+        sync: false             # optional — club inbox for new sign-up alerts

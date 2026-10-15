@@ -1,0 +1,13 @@
+{
+  "name": "khalsa-akhara-wrestling-coventry",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Khalsa Akhara Wrestling Coventry — club website, membership API and admin dashboard (zero-dependency Node backend).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}

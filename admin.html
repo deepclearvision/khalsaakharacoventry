@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard — Khalsa Akhara Wrestling Coventry</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ══════════ LOGIN ══════════ -->
+  <main class="login" id="loginView">
+    <div class="login__card">
+      <img class="login__logo" src="assets/img/logo.jpg" alt="Khalsa Akhara Wrestling Coventry logo">
+      <p class="login__kicker">Club Admin</p>
+      <h1 class="login__title">Dashboard</h1>
+      <p class="login__sub">Members • Prospects • Messages</p>
+      <form id="loginForm">
+        <input type="password" id="loginPassword" placeholder="Admin password" autocomplete="current-password" required>
+        <button type="submit" class="btn btn--solid">Sign In <span>→</span></button>
+        <div class="login__error" id="loginError" hidden></div>
+      </form>
+      <p class="login__hint">Runs locally on this computer — see README.md to change the password.</p>
+    </div>
+  </main>
+
+  <!-- ══════════ DASHBOARD ══════════ -->
+  <main class="dash" id="appView" hidden>
+    <header class="dash__head">
+      <div class="dash__brand">
+        <img src="assets/img/logo.jpg" alt="">
+        <div>
+          <h1>Club Dashboard</h1>
+          <p>Khalsa Akhara Wrestling Coventry</p>
+        </div>
+      </div>
+      <div class="dash__actions">
+        <button class="btn btn--ghost" id="refreshBtn">Refresh <span>↻</span></button>
+        <button class="btn btn--ghost" id="logoutBtn">Log Out</button>
+      </div>
+    </header>
+
+    <div class="dash__error" id="dashError" hidden></div>
+
+    <div class="stats">
+      <article class="stat"><strong id="statMembers">0</strong><span>Total Members</span></article>
+      <article class="stat"><strong id="statActive">0</strong><span>Active</span></article>
+      <article class="stat"><strong id="statPaid">0</strong><span>Paid This Month</span></article>
+      <article class="stat"><strong id="statProspects">0</strong><span>New Prospects</span></article>
+    </div>
+
+    <!-- Members -->
+    <section class="panel">
+      <header class="panel__head">
+        <h2>Members <span class="panel__count" id="membersCount"></span></h2>
+        <p>Everyone who signed up to join. Mark payments when received — fees are £30/month, taken on the 1st.</p>
+      </header>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Wrestler</th><th>Age</th><th>Guardian</th><th>Contact</th>
+              <th>Weight</th><th>Joined</th><th>Status</th><th>Paid</th><th class="col-actions">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="membersBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Prospects -->
+    <section class="panel">
+      <header class="panel__head">
+        <h2>Prospects <span class="panel__count" id="prospectsCount"></span></h2>
+        <p>People who asked for more information. Mark them contacted, then convert them into members.</p>
+      </header>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th><th>Email</th><th>Wrestler</th><th>Age</th>
+              <th>Received</th><th>Status</th><th class="col-actions">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="prospectsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Messages -->
+    <section class="panel">
+      <header class="panel__head">
+        <h2>Messages <span class="panel__count" id="messagesCount"></span></h2>
+        <p>Contact-form enquiries from the website.</p>
+      </header>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>From</th><th>Email</th><th>Phone</th><th>Subject</th><th>Message</th>
+              <th>Received</th><th class="col-actions">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="messagesBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

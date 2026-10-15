@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Club Information Pack — Khalsa Akhara Wrestling Coventry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ══════════ PRINT-READY INFO PACK — self-contained ════════════════ */
+    :root {
+      --orange: #f09000;
+      --orange-deep: #d95f00;
+      --black: #0a0a0b;
+      --ink: #1d1d23;
+      --muted: #6b6760;
+      --line: #e4ded2;
+      --cream: #faf7f0;
+      --font-display: "Anton", "Arial Narrow", sans-serif;
+      --font-body: "Inter", system-ui, "Segoe UI", sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body {
+      font-family: var(--font-body);
+      font-size: 10.5pt;
+      line-height: 1.6;
+      color: var(--ink);
+      background: #fff;
+    }
+
+    .page {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 14mm 6mm;
+    }
+    @media print {
+      @page { size: A4; margin: 15mm 13mm 22mm; }
+      body { font-size: 9.8pt; }
+      .page { max-width: none; padding: 0; break-after: page; }
+      .page:last-child { break-after: auto; }
+      .doc-footer {
+        position: fixed;
+        left: 13mm; right: 13mm; bottom: 7mm;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2mm;
+        border-top: 1px solid var(--line);
+        font-size: 7.5pt;
+        color: var(--muted);
+      }
+    }
+    @media screen {
+      .page { border-bottom: 1px dashed var(--line); padding-bottom: 18mm; }
+      .page:last-child { border-bottom: 0; }
+    }
+
+    figure, .card, .comp, .step, blockquote { break-inside: avoid; }
+    h1, h2, h3 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.12; }
+    p + p { margin-top: 8px; }
+    .lede { font-size: 11.5pt; }
+    .muted { color: var(--muted); }
+    .accent { color: var(--orange-deep); }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 8.5pt;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--orange-deep);
+    }
+    .kicker::before { content: ""; width: 28px; height: 2px; background: var(--orange); }
+    .doc-title { font-size: 27pt; margin-bottom: 6px; }
+    .doc-sub { font-size: 12pt; color: var(--muted); margin-bottom: 22px; max-width: 62ch; }
+
+    /* cover */
+    .cover { text-align: left; padding-top: 8mm; }
+    .cover__band {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 7mm;
+      background: linear-gradient(90deg, var(--orange), var(--orange-deep));
+    }
+    .cover__logo {
+      width: 26mm; height: 26mm;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--orange), 0 6px 22px rgba(240, 144, 0, 0.4);
+      margin-bottom: 14px;
+    }
+    .cover .kicker { margin-top: 8px; }
+    .cover h1 { font-size: 40pt; line-height: 1.02; letter-spacing: 0.01em; }
+    .cover h1 span { color: var(--orange-deep); }
+    .cover__sub { font-size: 13pt; color: var(--muted); max-width: 58ch; margin-top: 16px; }
+    .cover__strip {
+      display: grid;
+      grid-template-columns: 2fr 1.4fr 1.4fr;
+      gap: 6px;
+      margin-top: 26px;
+    }
+    .cover__strip img { width: 100%; height: 52mm; object-fit: cover; border-radius: 3px; }
+    .cover__meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 20px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      font-size: 9pt;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    /* body blocks */
+    .cols { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 24px; align-items: start; }
+    .figure img { width: 100%; height: 52mm; object-fit: cover; border-radius: 3px; display: block; }
+    .figure figcaption { font-size: 8pt; color: var(--muted); margin-top: 6px; }
+
+    .card {
+      margin-top: 18px;
+      padding: 16px 18px;
+      background: var(--cream);
+      border-left: 3px solid var(--orange);
+      border-radius: 0 4px 4px 0;
+    }
+    .card h3 { font-size: 13pt; color: var(--ink); margin-bottom: 6px; }
+    .card h3 em { font-style: normal; color: var(--orange-deep); }
+
+    /* benefits */
+    .benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+    .benefit { padding: 14px 16px; background: var(--cream); border: 1px solid var(--line); border-radius: 4px; }
+    .benefit strong { display: block; margin-bottom: 3px; font-size: 10.5pt; }
+    .benefit strong::before { content: "◆ "; color: var(--orange-deep); }
+    .benefit span { color: var(--muted); font-size: 9.3pt; }
+
+    /* competitions */
+    .comps { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+    .comp {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 14px 16px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+    }
+    .comp__medal {
+      width: 40px; height: 40px;
+      display: grid;
+      place-items: center;
+      background: var(--black);
+      color: var(--orange);
+      font-family: var(--font-display);
+      font-size: 15pt;
+      border-radius: 50%;
+    }
+    .comp strong { display: block; }
+    .comp span { color: var(--muted); font-size: 9.3pt; }
+
+    /* steps */
+    .steps { margin-top: 18px; counter-reset: step; }
+    .step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .step__num {
+      width: 46px; height: 46px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--orange), var(--orange-deep));
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 16pt;
+      border-radius: 4px;
+    }
+    .step strong { display: block; }
+    .step span { color: var(--muted); font-size: 9.5pt; }
+
+    .cta {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 15px 34px;
+      background: linear-gradient(135deg, #ffa62b, var(--orange) 45%, var(--orange-deep));
+      color: #160b00;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 10.5pt;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-radius: 3px;
+    }
+
+    .socials { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+    .social {
+      padding: 8px 16px;
+      background: var(--black);
+      color: #fff;
+      text-decoration: none;
+      font-size: 9pt;
+      font-weight: 600;
+      border-radius: 3px;
+    }
+    .social:hover { background: var(--orange-deep); }
+
+    .doc-footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 26px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      font-size: 8pt;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════ COVER ══════════ -->
+  <section class="page cover">
+    <div class="cover__band"></div>
+    <img class="cover__logo" src="../assets/img/logo.jpg" alt="Khalsa Akhara Wrestling Coventry logo">
+    <p class="kicker">Khalsa Akhara Wrestling Coventry</p>
+    <h1>Club<br>Information Pack</h1>
+    <p class="cover__sub">About the club, the benefits of wrestling, our recent achievements — and exactly how to join the akhara.</p>
+    <div class="cover__strip">
+      <img src="../assets/img/hero-1.jpg" alt="Khalsa Akhara wrestling">
+      <img src="../assets/img/about-3.jpg" alt="Technique on the mat">
+      <img src="../assets/img/gallery-1.jpg" alt="Club kit and wrestling">
+    </div>
+    <div class="cover__meta">
+      <span>Kushti • The Art of the Akhara</span>
+      <span>Coventry, United Kingdom</span>
+    </div>
+  </section>
+
+  <!-- ══════════ ABOUT ══════════ -->
+  <section class="page">
+    <p class="kicker">About Us</p>
+    <h2 class="doc-title">The Home of <span class="accent">Kushti</span></h2>
+    <p class="doc-sub">Khalsa Akhara Wrestling Coventry is the city&rsquo;s home of traditional Punjabi wrestling.</p>
+
+    <div class="cols">
+      <div>
+        <p class="lede">Kushti is the ancient art of the akhara — wrestling built on strength, technique and character. At Khalsa Akhara we carry that tradition into every session, for every wrestler.</p>
+        <p>We welcome wrestlers of every age and experience — from first-timers learning to move on the mat, to competitors chasing medals on the national stage. Every session is coached with discipline and heart, and every member, from our youngest wrestler to our veterans, is held to the same standard.</p>
+        <p>Our akhara is built on the warrior values of the Khalsa: honesty, integrity, respect, empathy, kindness, humility and compassion. There is zero tolerance for bullying or discrimination of any kind — the mat is a place where everyone belongs.</p>
+      </div>
+      <figure class="figure">
+        <img src="../assets/img/about-4.jpg" alt="Wrestlers at Khalsa Akhara">
+        <figcaption>Training together — one club, one family.</figcaption>
+      </figure>
+    </div>
+
+    <div class="card">
+      <h3>Why families choose us — <em>at a glance</em></h3>
+      <p>Coached sessions every week • beginner-friendly at every age • a safe, zero-tolerance environment • mats cleaned after every session • a clear pathway from first steps to tournament competition • and a community that supports each other, on and off the mat.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ BENEFITS ══════════ -->
+  <section class="page">
+    <p class="kicker">Why Wrestle</p>
+    <h2 class="doc-title">The Benefits of <span class="accent">Wrestling</span></h2>
+    <p class="doc-sub">Wrestling is one of the oldest sports on earth — and one of the best things a young person can do.</p>
+
+    <div class="benefits">
+      <div class="benefit"><strong>Full-body fitness</strong><span>Strength, speed, flexibility and stamina — wrestling develops every part of the body.</span></div>
+      <div class="benefit"><strong>Discipline &amp; focus</strong><span>Technique rewards patience and repetition. Wrestlers learn to concentrate and work at a goal.</span></div>
+      <div class="benefit"><strong>Confidence</strong><span>Every session proves what you&rsquo;re made of. Confidence built on the mat lasts a lifetime.</span></div>
+      <div class="benefit"><strong>Respect &amp; humility</strong><span>Win with humility, lose with grace. Wrestling teaches respect for opponents, coaches and yourself.</span></div>
+      <div class="benefit"><strong>Friendship &amp; community</strong><span>Teammates become family. The akhara is a community that supports each other in everything.</span></div>
+      <div class="benefit"><strong>A competitive pathway</strong><span>For wrestlers who want to test themselves, we compete at events across the country.</span></div>
+    </div>
+
+    <figure class="figure" style="margin-top:20px;">
+      <img src="../assets/img/hero-3.jpg" alt="Wrestling strength and technique">
+      <figcaption>Strength, honour and legacy — what the akhara builds.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ══════════ ACHIEVEMENTS ══════════ -->
+  <section class="page">
+    <p class="kicker">Recent Success</p>
+    <h2 class="doc-title">Achievements &amp; <span class="accent">Competitions</span></h2>
+    <p class="doc-sub">Our wrestlers compete across the country — here are the events the club has taken part in recently.</p>
+
+    <div class="comps">
+      <div class="comp"><span class="comp__medal">1</span><div><strong>British Open Championship 2026</strong><span>National open competition — club wrestlers on the big stage.</span></div></div>
+      <div class="comp"><span class="comp__medal">2</span><div><strong>Holla Mohalla Competition Coventry 2026</strong><span>Traditional wrestling festival competition, hosted in Coventry.</span></div></div>
+      <div class="comp"><span class="comp__medal">3</span><div><strong>Windsor Open Wrestling 2026</strong><span>Open tournament — medals contested across age and weight groups.</span></div></div>
+      <div class="comp"><span class="comp__medal">4</span><div><strong>Derbyshire Novices 2026</strong><span>Novice competition — first-timers stepping onto the tournament mat.</span></div></div>
+    </div>
+
+    <div class="card">
+      <h3>Watch it for yourself — <em>the club channel</em></h3>
+      <p>Tournament footage, training sessions and club life are all on the club&rsquo;s YouTube channel — <strong>@CoventryWrestling</strong>. Watch the akhara in action before you even set foot on the mat.</p>
+    </div>
+
+    <figure class="figure" style="margin-top:20px;">
+      <img src="../assets/img/hero-2.jpg" alt="Club competition and training">
+      <figcaption>From the training mat to the tournament floor.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ══════════ JOIN ══════════ -->
+  <section class="page">
+    <p class="kicker">Join Us</p>
+    <h2 class="doc-title">How to <span class="accent">Join</span></h2>
+    <p class="doc-sub">Five simple steps from your first enquiry to your first medal.</p>
+
+    <div class="steps">
+      <div class="step"><span class="step__num">1</span><div><strong>Fill in the sign-up form</strong><span>Head to the club website and complete the &ldquo;Become a Member&rdquo; form — it takes two minutes.</span></div></div>
+      <div class="step"><span class="step__num">2</span><div><strong>The club gets in touch</strong><span>We&rsquo;ll contact you with your first session details — what to wear, where to come and what to expect.</span></div></div>
+      <div class="step"><span class="step__num">3</span><div><strong>Come to your first session</strong><span>Comfortable sports clothing, a bottle of water, and the right attitude. That&rsquo;s all you need.</span></div></div>
+      <div class="step"><span class="step__num">4</span><div><strong>Become a member</strong><span>Membership is £30 a month, taken on the 1st of each month. You&rsquo;ll receive the full Onboarding Pack.</span></div></div>
+      <div class="step"><span class="step__num">5</span><div><strong>Grow with the akhara</strong><span>Train consistently, commit to attendance, and follow the pathway to competitions when you&rsquo;re ready.</span></div></div>
+    </div>
+
+    <div class="cols" style="margin-top:20px;">
+      <div class="card" style="margin-top:0;">
+        <h3>Fees — <em>simple and clear</em></h3>
+        <p><strong>£30 per month</strong>, taken on the <strong>1st of each month</strong>. No hidden extras, no surprise costs — the club keeps track of every payment.</p>
+      </div>
+      <div class="card" style="margin-top:0;">
+        <h3>Questions? — <em>we&rsquo;re happy to help</em></h3>
+        <p>Ask anything through the website contact form, or message the club on Facebook or Instagram. Welfare officers Gurpreet Singh &amp; H S Dhaliwal are always available too.<br><strong>Where we train:</strong> 35-50 Cross Rd, Coventry CV6 5GU.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="page">
+    <p class="kicker">Ready When You Are</p>
+    <h2 class="doc-title">The Mat Is <span class="accent">Calling</span></h2>
+    <p class="doc-sub">No experience? No problem. Step onto the mat and our coaches take it from there. Your akhara awaits.</p>
+
+    <figure class="figure">
+      <img src="../assets/img/hero-4.jpg" alt="Begin your wrestling journey">
+      <figcaption>Every wrestler starts somewhere — start here.</figcaption>
+    </figure>
+
+    <a class="cta" href="../join.html">Become a Member →</a>
+
+    <div class="socials" style="margin-top:20px;">
+      <a class="social" href="https://www.facebook.com/khalsaakharagym">Facebook — khalsaakharagym</a>
+      <a class="social" href="https://www.instagram.com/khalsaakharawrestling/">Instagram — khalsaakharawrestling</a>
+      <a class="social" href="https://www.youtube.com/@CoventryWrestling">YouTube — @CoventryWrestling</a>
+    </div>
+
+    <div class="doc-footer">
+      <span>Khalsa Akhara Wrestling Coventry — Club Information Pack</span>
+      <span>35-50 Cross Rd, Coventry CV6 5GU</span>
+    </div>
+  </section>
+
+</body>
+</html>
