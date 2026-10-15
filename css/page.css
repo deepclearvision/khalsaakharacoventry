@@ -568,6 +568,57 @@ svg { display: block; }
     linear-gradient(160deg, var(--panel), #101013);
   box-shadow: inset 0 0 0 1px var(--line), inset 4px 0 0 var(--orange), 0 30px 70px rgba(0, 0, 0, 0.45);
 }
+
+/* Competition calendar — event cards */
+.event-card {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 3vw, 26px);
+  padding: 20px 22px;
+}
+.event-card + .event-card { margin-top: 14px; }
+.event-card__date {
+  flex-shrink: 0;
+  width: 78px;
+  text-align: center;
+  padding: 12px 6px;
+  background: rgba(240, 144, 0, 0.08);
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+}
+.event-card__date strong {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.9rem;
+  line-height: 1;
+  color: var(--text);
+}
+.event-card__date span {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.event-card__body { flex: 1; min-width: 0; }
+.event-card__body h3 { font-size: 1.15rem; margin-bottom: 4px; }
+.event-card__meta { font-size: 0.9rem; color: var(--muted); }
+.event-card__chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.event-card__link { flex-shrink: 0; }
+.event-card-list { display: flex; flex-direction: column; }
+.event-card--local {
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.015) 0 1px, transparent 1px 4px),
+    linear-gradient(160deg, rgba(240,144,0,0.10), var(--panel));
+  box-shadow: inset 0 0 0 1px var(--line-strong), inset 4px 0 0 var(--orange), 0 30px 70px rgba(0, 0, 0, 0.45);
+}
+@media (max-width: 640px) {
+  .event-card { flex-direction: column; align-items: stretch; }
+  .event-card__date { width: 100%; display: flex; align-items: baseline; justify-content: center; gap: 8px; }
+  .event-card__link .btn { width: 100%; }
+}
 .panel h3 {
   font-family: var(--font-display);
   font-weight: 400;
