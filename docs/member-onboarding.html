@@ -57,6 +57,33 @@
       .page:last-child { border-bottom: 0; }
     }
 
+    /* download bar — screen only */
+    .dl-bar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 10px 16px;
+      background: var(--ink);
+      color: #fff;
+      font-size: 9.5pt;
+    }
+    .dl-bar__btn {
+      flex-shrink: 0;
+      display: inline-block;
+      padding: 8px 16px;
+      background: linear-gradient(100deg, var(--orange), var(--orange-deep));
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 4px;
+    }
+    .dl-bar__btn:hover { filter: brightness(1.12); }
+    @media print { .dl-bar { display: none; } }
+
     figure, .card, .chip, .rule, .value, table, blockquote { break-inside: avoid; }
     h1, h2, h3 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.12; }
     p + p { margin-top: 8px; }
@@ -217,6 +244,12 @@
   </style>
 </head>
 <body>
+
+  <!-- screen-only download bar (hidden when printing) -->
+  <div class="dl-bar" role="note">
+    <span>Member Onboarding Pack — read it here or save a copy.</span>
+    <a class="dl-bar__btn" href="member-onboarding.pdf" download>Download PDF</a>
+  </div>
 
   <!-- ══════════ COVER ══════════ -->
   <section class="page cover">
