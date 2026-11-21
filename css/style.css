@@ -1499,6 +1499,53 @@ svg { display: block; }
   .about-cta .btn { text-align: center; }
 }
 
+/* ═══ Membership price band ═════════════════════════════════════════ */
+.price-band {
+  position: relative;
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.012) 0 1px, transparent 1px 4px),
+    linear-gradient(90deg, rgba(240,144,0,0.18), rgba(240,144,0,0.05) 40%, rgba(240,144,0,0.18));
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+}
+.price-band__inner {
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 48px);
+  padding: clamp(24px, 4vw, 38px) 0;
+}
+.price-band__price { display: flex; flex-direction: column; align-items: center; }
+.price-band__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.price-band__price strong {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 5.5vw, 3.4rem);
+  line-height: 1;
+  color: var(--text);
+}
+.price-band__price strong i {
+  font-style: normal;
+  color: var(--orange);
+  font-size: 0.55em;
+  margin-right: 2px;
+  vertical-align: 0.28em;
+}
+.price-band__per {
+  font-size: 0.32em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.price-band__or { font-style: italic; color: var(--muted); font-size: 1.05rem; }
+@media (max-width: 640px) {
+  .price-band__inner { gap: 16px 26px; }
+}
+
 /* ═══ Classes / timetable section (homepage) ═════════════════════════ */
 .classes-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
 .class-card {
