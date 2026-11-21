@@ -20,8 +20,15 @@ services:
       - key: EMAIL_FROM
         sync: false             # optional — e.g. Khalsa Akhara <onboarding@resend.dev>
       - key: SITE_URL
-        sync: false             # e.g. https://khalsa-akhara.onrender.com
+        sync: false             # e.g. https://khalsa-akhara-wrestling.onrender.com
       - key: GOCARDLESS_URL
         sync: false             # optional — placeholder until the real plan link exists
       - key: NOTIFY_EMAIL
         sync: false             # optional — club inbox for new sign-up alerts
+
+  # Khalsa Akhara Gym Coventry — the gym website (pure static, no backend)
+  - type: web
+    name: khalsa-akhara-gym
+    runtime: static
+    staticPublishPath: ./gym-site
+    plan: free
