@@ -494,6 +494,44 @@ function requireAuth(req, res, next) {
   next();
 }
 
+/* ─────────────────── BWA competition calendar proxy ──────────────────── */
+/* The BWA calendar (britishwrestling.org → c-mats.com) is a JS app backed
+   by an Azure API that sends no CORS headers, so browsers can't call it
+   directly. This proxies + filters it and caches the result for 6 hours. */
+const BWA_API = 'https://cmats-api.azurewebsites.net/api/events';
+let competitionsCache = null;   // { at, events }
+
+function fetchCompetitions() {
+  return new Promise(function (resolve, reject) {
+    https.get(BWA_API + '?page=1&size=300', { headers: { Accept: 'application/json' } }, function (r) {
+      let data = '';
+      r.on('data', function (c) { data += c; });
+      r.on('end', function () {
+        if (r.statusCode !== 200) return reject(new Error('BWA API status ' + r.statusCode));
+        try {
+          const json = JSON.parse(data);
+          const now = new Date();
+          const events = (json.items || [])
+            .filter(function (e) { return e.category === 'Competitions' && new Date(e.start) >= now; })
+            .sort(function (a, b) { return a.start.localeCompare(b.start); })
+            .map(function (e) {
+              return {
+                linkId: e.linkId,
+                name: e.name,
+                start: (e.start || '').slice(0, 10),
+                end: (e.end || '').slice(0, 10),
+                location: e.location || '',
+                town: e.town || '',
+                private: !!e.private,
+              };
+            });
+          resolve(events);
+        } catch (err) { reject(err); }
+      });
+    }).on('error', reject);
+  });
+}
+
 const handlers = {
   /* POST /api/member — public */
   'POST /api/member': function (req, res, body) {
@@ -607,6 +645,25 @@ const handlers = {
     sendJSON(res, 200, { ok: true, authed: !!sessionFrom(req) });
   },
 
+  /* GET /api/competitions — public (proxies the BWA calendar, 6h cache) */
+  'GET /api/competitions': function (req, res) {
+    if (competitionsCache && Date.now() - competitionsCache.at < 6 * 60 * 60 * 1000) {
+      return sendJSON(res, 200, { ok: true, updated: competitionsCache.at, events: competitionsCache.events });
+    }
+    fetchCompetitions()
+      .then(function (events) {
+        competitionsCache = { at: Date.now(), events };
+        sendJSON(res, 200, { ok: true, updated: competitionsCache.at, events });
+      })
+      .catch(function (err) {
+        console.error('[competitions] fetch failed:', err.message);
+        if (competitionsCache) {
+          return sendJSON(res, 200, { ok: true, updated: competitionsCache.at, stale: true, events: competitionsCache.events });
+        }
+        sendJSON(res, 502, { ok: false, error: 'Could not reach the BWA calendar right now.' });
+      });
+  },
+
   /* GET /api/dashboard — admin */
   'GET /api/dashboard': function (req, res) {
     const d = new Date();
@@ -688,7 +745,7 @@ function route(req, res) {
     }
 
     const isPublicWrite = (method === 'POST' && ['/api/member', '/api/prospect', '/api/message', '/api/login'].includes(pathname));
-    const isPublicRead  = (method === 'GET' && pathname === '/api/session');
+    const isPublicRead  = (method === 'GET' && ['/api/session', '/api/competitions'].includes(pathname));
     const authed = !!sessionFrom(req);
     if (!isPublicWrite && !isPublicRead && !authed) {
       return sendJSON(res, 401, { ok: false, error: 'Not logged in.' });

@@ -11,7 +11,8 @@ the membership form, automated welcome emails, and the admin dashboard.
 | `join.html`, `js/join.js` | **Membership form** — two-step wizard, posts to the backend |
 | `shop.html` | Club shop — 11 products, orders placed through the official Bludog store |
 | `rules.html` / `history.html` / `benefits.html` / `coaches.html` | About Us pages (shared `css/page.css`) |
-| `calendar.html` | Competition Calendar — upcoming BWA events with dates, venues and entry links |
+| `timetable.html` | Class Timetable — weekly grid of all sessions (Tots, Juniors, Seniors, Advanced) |
+| `calendar.html`, `js/calendar.js` | Competition Calendar — BWA events with dates, venues and entry links; **auto-updates** via `/api/competitions` |
 | `server.js` | Zero-dependency Node server — serves the site, the API, and sends welcome emails |
 | `admin.html`, `admin.css`, `admin.js` | The club dashboard: members, payments, prospects and messages |
 | `docs/member-onboarding.html` | Print-ready New Wrestler Onboarding Pack — with a "Download PDF" button serving `docs/member-onboarding.pdf` |
@@ -114,6 +115,10 @@ holds the admin password hash and email key — back it up too, and never share 
 ## Notes
 
 - Sessions log out when the server restarts (tokens are kept in memory).
+- The Competition Calendar auto-updates: `GET /api/competitions` (public) proxies
+  the BWA's C-Mats API and caches the result for 6 hours. If the server or the
+  BWA API is unreachable, the page falls back to the last static snapshot in
+  `calendar.html`.
 - Regenerate the onboarding PDF after editing `docs/member-onboarding.html`:
   `"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless=new --disable-gpu --no-pdf-header-footer --virtual-time-budget=10000 --print-to-pdf="C:\Users\User\Desktop\Khalsa Akhara Coventry\docs\member-onboarding.pdf" "file:///C:/Users/User/Desktop/Khalsa%20Akhara%20Coventry/docs/member-onboarding.html"`
 - Public forms are rate-limited per IP and use a honeypot field against bots.

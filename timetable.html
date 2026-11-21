@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Class Timetable — Khalsa Akhara Wrestling Coventry</title>
+  <meta name="description" content="The weekly class timetable at Khalsa Akhara Wrestling Coventry — Tots & Beginners (4+), Juniors (7+), Seniors (14+) and the Advanced class. Find your session.">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Mukta+Mahee:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/page.css?v=6">
+</head>
+<body>
+
+  <!-- ══════════ GLOBAL TEXTURE & AMBIENT LAYERS ══════════ -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="ambient" aria-hidden="true">
+    <span class="ambient__orb ambient__orb--1"></span>
+    <span class="ambient__orb ambient__orb--2"></span>
+  </div>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <header class="site-head" id="siteHead">
+    <a class="brand" href="index.html" aria-label="Khalsa Akhara Wrestling Coventry — home">
+      <span class="brand__logo"><img src="assets/img/logo.jpg" alt="Khalsa Akhara Wrestling Coventry club logo"></span>
+      <span class="brand__text">
+        <strong>Khalsa Akhara</strong>
+        <em>Wrestling Coventry</em>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <a href="index.html" class="main-nav__link">Home</a>
+      <div class="main-nav__drop">
+        <button type="button" class="main-nav__link main-nav__dropbtn" id="aboutDropBtn" aria-haspopup="true" aria-expanded="false">About Us <span class="main-nav__caret" aria-hidden="true">▾</span></button>
+        <div class="main-nav__menu" id="aboutDropMenu">
+          <a href="index.html#about">About Us</a>
+          <a href="coaches.html">Coaching Team</a>
+          <a href="rules.html">Rules of the Akhara</a>
+          <a href="history.html">Wrestling History</a>
+          <a href="benefits.html">Benefits of Wrestling</a>
+        </div>
+      </div>
+      <a href="timetable.html" class="main-nav__link is-active">Timetable</a>
+      <a href="calendar.html" class="main-nav__link">Calendar</a>
+      <a href="shop.html" class="main-nav__link">Shop</a>
+      <a href="index.html#media" class="main-nav__link">Media</a>
+      <a href="index.html#contact" class="main-nav__link">Contact</a>
+    </nav>
+
+    <div class="head-actions">
+      <div class="head-socials" aria-label="Social media">
+        <a class="social" href="https://www.facebook.com/khalsaakharagym" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5Z"/></svg></a>
+        <a class="social" href="https://www.instagram.com/khalsaakharawrestling/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a class="social" href="https://www.youtube.com/@CoventryWrestling" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.9C18.2 5 12 5 12 5s-6.2 0-7.8.3A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.9c1.6.3 7.8.3 7.8.3s6.2 0 7.8-.3a2.6 2.6 0 0 0 1.8-1.9A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8ZM10 15.2V8.8L15.5 12 10 15.2Z"/></svg></a>
+      </div>
+      <a href="join.html" class="btn btn--solid btn--sm head-cta">Become a Member</a>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MOBILE MENU ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__nav" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <div class="mob-fold">
+        <button type="button" class="mob-fold__toggle" aria-expanded="false" aria-controls="mobAboutLinks">About Us <svg class="mob-fold__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="mob-fold__panel" id="mobAboutLinks">
+          <a href="index.html#about">About Us</a>
+          <a href="coaches.html">Coaching Team</a>
+          <a href="rules.html">Rules of the Akhara</a>
+          <a href="history.html">Wrestling History</a>
+          <a href="benefits.html">Benefits of Wrestling</a>
+        </div>
+      </div>
+      <a href="timetable.html">Timetable</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="shop.html">Shop</a>
+      <a href="index.html#media">Media</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="join.html" class="mobile-menu__cta">Become a Member</a>
+    </nav>
+    <div class="mobile-menu__socials" aria-label="Social media">
+      <a class="social" href="https://www.facebook.com/khalsaakharagym" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5Z"/></svg></a>
+      <a class="social" href="https://www.instagram.com/khalsaakharawrestling/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a class="social" href="https://www.youtube.com/@CoventryWrestling" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.9C18.2 5 12 5 12 5s-6.2 0-7.8.3A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.9c1.6.3 7.8.3 7.8.3s6.2 0 7.8-.3a2.6 2.6 0 0 0 1.8-1.9A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8ZM10 15.2V8.8L15.5 12 10 15.2Z"/></svg></a>
+    </div>
+    <div class="mobile-menu__foot">
+      <span class="punjabi">ਖਾਲਸਾ ਅਖਾੜਾ</span>
+      <span>Honesty • Integrity • Respect</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ══════════ PAGE HERO ══════════ -->
+    <section class="page-hero" style="background-image:url('assets/img/about-2.jpg')">
+      <div class="container page-hero__inner">
+        <p class="kicker">Train With Us • Khalsa Akhara</p>
+        <h1 class="page-hero__title">Class <span class="accent">Timetable</span></h1>
+        <p class="page-hero__sub">Eight coached sessions every week, four age groups, one mat. Find the class for you — from your very first steps to advanced competition wrestling.</p>
+        <nav class="page-hero__crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">/</span>
+          <span>Class Timetable</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ══════════ WEEK AT A GLANCE ══════════ -->
+    <section class="page-section" id="week">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">The Week at a Glance</p>
+          <h2 class="section-title">Every Session, <span class="accent">Mapped</span></h2>
+          <p class="section-intro">Scroll sideways on phones to see the whole week. Every block below is a coached session on the mat.</p>
+        </div>
+
+        <div class="week-grid-scroll reveal">
+          <div class="week-grid" role="table" aria-label="Weekly class timetable">
+            <div class="week-grid__head"></div>
+            <div class="week-grid__head">Monday</div>
+            <div class="week-grid__head">Tuesday</div>
+            <div class="week-grid__head">Wednesday</div>
+            <div class="week-grid__head">Thursday</div>
+            <div class="week-grid__head">Friday</div>
+            <div class="week-grid__head">Saturday</div>
+            <div class="week-grid__head">Sunday</div>
+
+            <div class="week-grid__time">10:00 – 11:00</div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell week-cell--on"><strong>Tots &amp; Beginners</strong><em>Ages 4+</em></div>
+            <div class="week-cell"></div>
+
+            <div class="week-grid__time">11:00 – 12:30</div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell week-cell--on week-cell--junior"><strong>Juniors</strong><em>Ages 7+</em></div>
+            <div class="week-cell"></div>
+
+            <div class="week-grid__time">2:30 – 4:00</div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell week-cell--on week-cell--advanced"><strong>Advanced</strong><em>Ages 14+</em><span class="week-cell__note">Speak to coaches first</span></div>
+
+            <div class="week-grid__time">5:00 – 6:00</div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell week-cell--on"><strong>Tots &amp; Beginners</strong><em>Ages 4+</em></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+
+            <div class="week-grid__time">6:00 – 7:30</div>
+            <div class="week-cell week-cell--on week-cell--junior"><strong>Juniors</strong><em>Ages 7+</em></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell week-cell--on week-cell--junior"><strong>Juniors</strong><em>Ages 7+</em></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+
+            <div class="week-grid__time">7:30 – 9:00</div>
+            <div class="week-cell week-cell--on week-cell--senior"><strong>Seniors</strong><em>Ages 14+</em></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell week-cell--on week-cell--senior"><strong>Seniors</strong><em>Ages 14+</em></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+            <div class="week-cell"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ THE CLASSES ══════════ -->
+    <section class="page-section page-section--tight" style="background:linear-gradient(180deg, rgba(240,144,0,0.04), transparent);">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">The Classes</p>
+          <h2 class="section-title">Choose Your <span class="accent">Session</span></h2>
+          <p class="section-intro">Four classes across the week — each one coached, structured and welcoming to new wrestlers.</p>
+        </div>
+
+        <div class="class-grid">
+          <div class="class-card class-card--tots reveal">
+            <span class="class-card__tag">Ages 4+ • New Wrestlers</span>
+            <h3>Tots &amp; Beginners</h3>
+            <ul class="class-card__schedule">
+              <li><span>Thursday</span><strong>5:00 – 6:00</strong></li>
+              <li><span>Saturday</span><strong>10:00 – 11:00</strong></li>
+            </ul>
+            <p class="class-card__note--soft">The perfect first step onto the mat — fun, movement and the very basics of wrestling.</p>
+          </div>
+
+          <div class="class-card class-card--junior reveal" style="--d:.08s;">
+            <span class="class-card__tag">Ages 7+ • 3 Classes a Week</span>
+            <h3>Juniors</h3>
+            <ul class="class-card__schedule">
+              <li><span>Monday</span><strong>6:00 – 7:30</strong></li>
+              <li><span>Thursday</span><strong>6:00 – 7:30</strong></li>
+              <li><span>Saturday</span><strong>11:00 – 12:30</strong></li>
+            </ul>
+            <p class="class-card__note--soft">Technique, fitness and confidence — building the wrestlers of tomorrow.</p>
+          </div>
+
+          <div class="class-card class-card--senior reveal" style="--d:.16s;">
+            <span class="class-card__tag">Ages 14+ • 2 Classes a Week</span>
+            <h3>Seniors</h3>
+            <ul class="class-card__schedule">
+              <li><span>Monday</span><strong>7:30 – 9:00</strong></li>
+              <li><span>Thursday</span><strong>7:30 – 9:00</strong></li>
+            </ul>
+            <p class="class-card__note--soft">Full wrestling training for older juniors and adults — from beginners to competitors.</p>
+          </div>
+
+          <div class="class-card class-card--advanced reveal" style="--d:.24s;">
+            <span class="class-card__tag">Ages 14+ • Invitation Class</span>
+            <h3>Advanced</h3>
+            <ul class="class-card__schedule">
+              <li><span>Sunday</span><strong>2:30 – 4:00</strong></li>
+            </ul>
+            <p class="class-card__note">Speak to the coaches prior to attending.</p>
+          </div>
+        </div>
+
+        <div class="panel reveal" style="margin-top:34px; display:flex; flex-wrap:wrap; align-items:center; gap:14px;">
+          <p style="flex:1; min-width:260px;">New to the club? Your first session is about meeting the team and learning the mat. Come 15 minutes early, bring a water bottle, and wear comfortable kit — the rest is on us.</p>
+          <a class="btn btn--solid btn--sm" href="join.html">Become a Member <span class="btn__arrow">→</span></a>
+          <a class="btn btn--ghost btn--sm" href="coaches.html">Meet the Coaches</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CTA ══════════ -->
+    <section class="page-cta">
+      <div class="container">
+        <h2 class="page-cta__title">Pick a Class.<br>Step on the Mat.</h2>
+        <p class="page-cta__sub">Eight sessions a week — there&rsquo;s always a place for you at the akhara.</p>
+        <a class="btn btn--dark" href="join.html">Become a Member <span class="btn__arrow">→</span></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__logo"><img src="assets/img/logo.jpg" alt="Khalsa Akhara Wrestling Coventry club logo"></span>
+          <span class="brand__text">
+            <strong>Khalsa Akhara</strong>
+            <em>Wrestling Coventry</em>
+          </span>
+        </a>
+        <p>The home of traditional Punjabi wrestling in Coventry. Discipline, honour and brotherhood — on the mat and beyond.</p>
+        <div class="footer__socials" aria-label="Social media">
+          <a class="social" href="https://www.facebook.com/khalsaakharagym" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5Z"/></svg></a>
+          <a class="social" href="https://www.instagram.com/khalsaakharawrestling/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="social" href="https://www.youtube.com/@CoventryWrestling" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.9C18.2 5 12 5 12 5s-6.2 0-7.8.3A2.6 2.6 0 0 0 2.4 7.2 27 27 0 0 0 2 12a27 27 0 0 0 .4 4.8 2.6 2.6 0 0 0 1.8 1.9c1.6.3 7.8.3 7.8.3s6.2 0 7.8-.3a2.6 2.6 0 0 0 1.8-1.9A27 27 0 0 0 22 12a27 27 0 0 0-.4-4.8ZM10 15.2V8.8L15.5 12 10 15.2Z"/></svg></a>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="Footer">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="coaches.html">Coaching Team</a>
+        <a href="rules.html">Rules of the Akhara</a>
+        <a href="history.html">Wrestling History</a>
+        <a href="benefits.html">Benefits of Wrestling</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#media">Media</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="join.html">Become a Member</a>
+      </nav>
+
+      <div class="footer__col">
+        <h4>Our Values</h4>
+        <p class="footer__values">Honesty • Integrity • Respect • Empathy • Kindness • Humility • Compassion</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <p>35-50 Cross Rd,<br>Coventry CV6 5GU, UK</p>
+        <p><strong>Welfare officers</strong><br>Gurpreet Singh &amp; H S Dhaliwal</p>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <div class="container footer__bar-inner">
+        <p>© 2026 Khalsa Akhara Wrestling Coventry. All rights reserved.</p>
+        <p class="punjabi footer__punjabi">ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=4"></script>
+</body>
+</html>

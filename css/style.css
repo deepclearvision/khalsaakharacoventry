@@ -911,6 +911,14 @@ svg { display: block; }
    SHOP
    ════════════════════════════════════════════════════════════════════ */
 .shop { background: #0d0d10; }
+.classes__glow {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(40% 34% at 94% 8%, rgba(240, 144, 0, 0.1), transparent 70%),
+    radial-gradient(30% 30% at 4% 88%, rgba(217, 95, 0, 0.08), transparent 70%);
+}
+
 .shop__glow {
   position: absolute; inset: 0;
   pointer-events: none;
@@ -1490,3 +1498,54 @@ svg { display: block; }
   .about-cta { flex-direction: column; align-items: stretch; }
   .about-cta .btn { text-align: center; }
 }
+
+/* ═══ Classes / timetable section (homepage) ═════════════════════════ */
+.classes-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.class-card {
+  position: relative;
+  display: flex; flex-direction: column; gap: 14px;
+  padding: 26px 24px;
+  background: linear-gradient(160deg, var(--panel), #0e0e12);
+  box-shadow: inset 0 0 0 1px var(--line), inset 3px 0 0 var(--orange), 0 30px 70px rgba(0, 0, 0, 0.45);
+  clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px);
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+}
+.class-card:hover { transform: translateY(-6px); }
+.class-card--tots { box-shadow: inset 0 0 0 1px var(--line), inset 3px 0 0 #7ed0a4, 0 30px 70px rgba(0, 0, 0, 0.45); }
+.class-card--junior { box-shadow: inset 0 0 0 1px var(--line), inset 3px 0 0 #ffb84d, 0 30px 70px rgba(0, 0, 0, 0.45); }
+.class-card--senior { box-shadow: inset 0 0 0 1px var(--line), inset 3px 0 0 var(--orange-deep), 0 30px 70px rgba(0, 0, 0, 0.45); }
+.class-card--advanced { box-shadow: inset 0 0 0 1px var(--line), inset 3px 0 0 #e8e2d4, 0 30px 70px rgba(0, 0, 0, 0.45); }
+.class-card__tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.class-card--tots .class-card__tag { color: #7ed0a4; }
+.class-card--junior .class-card__tag { color: #ffb84d; }
+.class-card--senior .class-card__tag { color: var(--orange-deep); }
+.class-card--advanced .class-card__tag { color: #e8e2d4; }
+.class-card h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin: 0;
+}
+.class-card__schedule { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.class-card__schedule li {
+  display: flex; justify-content: space-between; gap: 10px;
+  font-size: 0.92rem;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+}
+.class-card__schedule li:last-child { border-bottom: 0; padding-bottom: 0; }
+.class-card__schedule span { color: var(--muted); }
+.class-card__schedule strong { color: var(--text); font-weight: 600; }
+.class-card__note { font-size: 0.84rem; color: var(--orange); margin-top: auto; }
+.classes-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+
+@media (max-width: 1080px) { .classes-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .classes-grid { grid-template-columns: 1fr; } }
